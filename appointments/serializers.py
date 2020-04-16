@@ -1,8 +1,10 @@
 from rest_framework import serializers
-from .models import Book
+from .models import Appointment
 
-class BookSerializer(serializers.ModelSerializer):
+class AppointmentSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Book
-        fields = ('id', 'title', 'author', 'image')
+        model = Appointment
+        fields = ('id', 'appointment_date', 'service')
+        
+    
