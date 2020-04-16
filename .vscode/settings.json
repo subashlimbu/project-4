@@ -1,3 +1,5 @@
 {
-  "python.pythonPath": "/Users/subashlimbu/.local/share/virtualenvs/project-4-H4zuQfsW/bin/python"
+  "python.pythonPath": "/Users/jdpinto/.local/share/virtualenvs/project-4-I5-qfvX2/bin/python",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true
 }
