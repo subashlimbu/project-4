@@ -21,6 +21,8 @@ class User(AbstractUser):
         default=INDIVIDUAL,
     )
     
+    
+    
     def __str__(self):
         return self.username
     
