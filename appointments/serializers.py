@@ -8,14 +8,13 @@ class AppointmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Appointment
         fields = ('id', 'appointment_date', 'services', 'user')
-        
 
 class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
         fields = ('Category')
-  
+
 class ServiceSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -27,11 +26,10 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('image', 'firstname', 'lastname', 'age', 'phone_number', 'user_type')
-        
+
 class PopulateAppointmentSerializer(serializers.ModelSerializer):
     services = ServiceSerializer()
     
     class Meta:
         model = Appointment
         fields = ('id', 'appointment_date', 'services', 'user')
-        
