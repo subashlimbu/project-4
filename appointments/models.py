@@ -55,7 +55,8 @@ class Services(models.Model):
 
 class Appointment(models.Model):
     appointment_date = models.DateTimeField()
-    service_name = models.ManyToManyField(Services, related_name="appointment", blank=False)
+    service_name = models.ManyToManyField(
+        Services, related_name="appointments", blank=False)
     # services = models.ForeignKey(
     #     Services, related_name='appointments', on_delete=models.CASCADE)
     user = models.ForeignKey(
