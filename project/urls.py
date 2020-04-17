@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/appointments/', include('appointments.urls')),
     path('', include('frontend.urls')),
-    path('api/', include('jwt_auth.urls'))
+    path('api/', include('jwt_auth.urls')),
+    # path('api/services/', include('appointments.urls'))
 ]
