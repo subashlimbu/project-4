@@ -26,8 +26,3 @@ class DetailView(APIView): # extend the APIView
         serializer = AppointmentSerializer(appointment)
 
         return Response(serializer.data) # send the JSON to the client
-    
-    
-
-    
-

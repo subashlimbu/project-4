@@ -55,11 +55,11 @@ class Services(models.Model):
 
 class Appointment(models.Model):
     appointment_date = models.DateTimeField()
-    # services should be many to many
-    services = models.ForeignKey(
-        Services, related_name='appointments', on_delete=models.CASCADE)
+    service_name = models.ManyToManyField(Services, related_name="appointment", blank=False)
+    # services = models.ForeignKey(
+    #     Services, related_name='appointments', on_delete=models.CASCADE)
     user = models.ForeignKey(
         User, related_name='appointments', on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return 'Appointment: {} {}'.format(self.id, self.appointment_date)
+    def __str__(self):
+        return 'Appointment: {} {}'.format(self.id, self.appointment_date)
