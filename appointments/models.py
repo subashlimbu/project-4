@@ -11,6 +11,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "categories"
+
     def __str__(self):
         return self.category
 
@@ -55,18 +56,10 @@ class Services(models.Model):
 class Appointment(models.Model):
     appointment_date = models.DateTimeField()
     # services should be many to many
-    services = models.ForeignKey(Services, related_name='appointments', on_delete=models.CASCADE)
-    user = models.ForeignKey(User, related_name='appointments', on_delete=models.CASCADE)
-    
-    def __str__(self):
-        return 'Appointment: {} {}'.format(self.id, self.appointment_date)
-    
-    
-    
+    services = models.ForeignKey(
+        Services, related_name='appointments', on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, related_name='appointments', on_delete=models.CASCADE)
 
-
-
-    
-
-    
-
+    # def __str__(self):
+    #     return 'Appointment: {} {}'.format(self.id, self.appointment_date)
