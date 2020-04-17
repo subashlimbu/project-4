@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Appointment, Category, Services, User
+from .models import Appointment, Category, Service, User
 # from ..jwt_auth/models import User
 # jwt_auth/models.py
 
@@ -18,7 +18,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class ServiceSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Services
+        model = Service
         fields = ('service_name', 'delivery_time', 'private_price', 'business_price')
 
 class UserSerializer(serializers.ModelSerializer):
@@ -28,8 +28,9 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('image', 'firstname', 'lastname', 'age', 'phone_number', 'user_type')
 
 class PopulateAppointmentSerializer(serializers.ModelSerializer):
-    services = ServiceSerializer()
+    services = ServiceSerializer(many=True)
     
     class Meta:
         model = Appointment
-        fields = ('id', 'appointment_date', 'services', 'user')
+        fields = ('id', 'appointment_date', 'user', 'services')
+
