@@ -29,22 +29,22 @@ class DetailView(APIView): # extend the APIView
 
 
 # Services
-# class ServicesListView(ListCreateAPIView): # extend the APIView
-#     queryset = Services.objects.all()
-#     serializer_class = ServiceSerializer
+class ServiceListView(ListCreateAPIView): # extend the APIView
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
 
-#     def get(self, _request):
-#         services = Services.objects.all()
-#         serializer = ServiceSerializer(services, many=True)
+    def get(self, _request):
+        services = Service.objects.all()
+        serializer = ServiceSerializer(services, many=True)
 
-#         return Response(serializer.data)
+        return Response(serializer.data)
 
-# class ServicesDetailView(RetrieveUpdateDestroyAPIView):
-#     queryset = Services.objects.all()
-#     serializer_class = ServiceSerializer
+class ServiceDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
 
-#     def get(self, _request, pk):
-#         services = Services.objects.get(pk=pk)
-#         serializer = ServicesSerializer(services)
+    def get(self, _request, pk):
+        services = Service.objects.get(pk=pk)
+        serializer = ServicesSerializer(services)
 
-#         return Response(serializer.data) # send the JSON to the client
+        return Response(serializer.data) # send the JSON to the client
