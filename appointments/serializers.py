@@ -8,7 +8,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Appointment
-        fields = ('id', 'appointment_date', 'services_name', 'user')
+        fields = ('id', 'appointment_date', 'services', 'user')
 
 
 class CategorySerializer(serializers.ModelSerializer):
