@@ -61,5 +61,5 @@ class Appointment(models.Model):
     user = models.ForeignKey(
         User, related_name='appointments', on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return 'Appointment: {} {}'.format(self.id, self.appointment_date)
+    def __str__(self):
+        return 'Appointment: {} {}'.format(self.id, self.appointment_date)

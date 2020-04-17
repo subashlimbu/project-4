@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 
-const App = () => {
-  return <div>Hello world</div>
-}
+import Login from './components/Login'
+import Register from './components/Register'
+
+const App = () => (
+  <HashRouter>
+    <Switch>
+      <Route path="/register" component={Register}/>
+      <Route path="/login" component={Login}/>
+    </Switch>
+  </HashRouter>
+)
 
 ReactDOM.render(
   <App />,
