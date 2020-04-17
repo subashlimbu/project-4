@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  justify-content: center;
+}
+
+div.hero-body {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/healthcare-data-hed-796x417.png');
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+}
+
+.navbar-edited{
+  color: white;
+  &:hover{
+    border-bottom: 2px solid white;
+    color: teal;
+  }
+}
+
+.title, .subtitle {
+  margin: 20px;
+  font-weight: bolder;
+}
+
