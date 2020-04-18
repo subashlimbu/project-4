@@ -48,7 +48,7 @@ class NavBar extends React.Component {
           <div className={`navbar-menu ${this.state.navMobileOpen ? 'is-active' : ''}`}>
             <div className="navbar-end">
               <div className="navbar-item">
-                {isLoggedIn && <Link className="navbar-edited" to="/services">Services</Link>}
+                <Link className="navbar-edited" to="/services">Services</Link>
               </div>
               
               <div className="navbar-item">
@@ -62,17 +62,17 @@ class NavBar extends React.Component {
               <div className="navbar-item">
                 {!isLoggedIn && <Link className="navbar-edited" to="/login">Login</Link>}
               </div>
+              <div
+                onClick={() => this.handleLogout()}
+                className="navbar-item"
+              >
+                {isLoggedIn && <Link className="navbar-edited">Log out</Link> }
+              </div>
 
               <div className="navbar-item has-dropdown is-hoverable navbar-name">
 
                 <div className="navbar-dropdown">
                   <div className="navbar-edited">
-                    <div
-                      onClick={() => this.handleLogout()}
-                      className="navbar-item dropdown-item"
-                    >
-                      {isLoggedIn &&  <Link className="navbar-edited">Log out</Link> }
-                    </div>
                   </div>
                 </div>
 
