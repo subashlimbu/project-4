@@ -2,8 +2,8 @@ from rest_framework.views import APIView # get the APIView class from DRF
 from rest_framework.response import Response # get the Response class from DRF
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-from .models import Appointment, Service, Category
-from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer, PopulateServiceSerializer, CategorySerializer
+from .models import Appointment, Service, Category, User
+from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer, PopulateServiceSerializer, CategorySerializer, UserSerializer
 
 # Create your views here.
 # Appointments
@@ -69,5 +69,16 @@ class CategoryDetailView(RetrieveUpdateDestroyAPIView):
     def get(self, _request, pk):
         category = Category.objects.get(pk=pk)
         serializer = CategorySerializer(category)
+
+        return Response(serializer.data)
+
+# Users
+class UserDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def get(self, _request, pk):
+        user = User.objects.get(pk=pk)
+        serializer = UserSerializer(user)
 
         return Response(serializer.data)
