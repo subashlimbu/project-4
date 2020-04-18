@@ -35,6 +35,13 @@ class PopulateServiceSerializer(serializers.ModelSerializer):
                   'private_price', 'business_price', 'category')
 
 
+class PopulateCategorySerializer(serializers.ModelSerializer):
+    services = ServiceSerializer(many=True)
+
+    class Meta:
+        model = Category
+        fields = ('id', 'category', 'services')
+
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:

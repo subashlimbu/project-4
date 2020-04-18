@@ -3,7 +3,7 @@ from rest_framework.response import Response # get the Response class from DRF
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 from .models import Appointment, Service, Category, User
-from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer, PopulateServiceSerializer, CategorySerializer, UserSerializer
+from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer, PopulateServiceSerializer, CategorySerializer, UserSerializer, PopulateCategorySerializer
 
 # Create your views here.
 # Appointments
@@ -58,7 +58,7 @@ class CategoryListView(ListCreateAPIView):
 
     def get(self, _request):
         category = Category.objects.all()
-        serializer = CategorySerializer(category, many=True)
+        serializer = PopulateCategorySerializer(category, many=True)
 
         return Response(serializer.data)
 
@@ -68,7 +68,7 @@ class CategoryDetailView(RetrieveUpdateDestroyAPIView):
 
     def get(self, _request, pk):
         category = Category.objects.get(pk=pk)
-        serializer = CategorySerializer(category)
+        serializer = PopulateCategorySerializer(category)
 
         return Response(serializer.data)
 

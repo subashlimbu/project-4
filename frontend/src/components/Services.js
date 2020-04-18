@@ -23,7 +23,7 @@ class Services extends React.Component {
   render() {
     console.log(this.state.categories)
     const category = this.state.categories
-    console.log(category)
+    // console.log(category)
     return (
       <>
         <div>
