@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import auth from '../lib/auth'
+import auth from '../lib/auth'
 import { withRouter } from 'react-router-dom'
-// import { GiHotMeal } from 'react-icons/gi'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faSignInAlt, faUtensils } from '@fortawesome/free-solid-svg-icons'
+
 
 class NavBar extends React.Component {
 
@@ -15,10 +13,10 @@ class NavBar extends React.Component {
     }
   }
 
-  // handleLogout() {
-  //   auth.logout()
-  //   this.props.history.push('/')
-  // }
+  handleLogout() {
+    auth.logout()
+    this.props.history.push('/')
+  }
 
   // componentDidUpdate(prevProps) {
   //   if (this.props.location.pathname !== prevProps.location.pathname) {
@@ -27,7 +25,7 @@ class NavBar extends React.Component {
   // }
 
   render() {
-    // const isLoggedIn = auth.isLoggedIn()
+    const isLoggedIn = auth.isLoggedIn()
     return <>
       <nav className="navbar is-black">
         <div className="container navbar-container">
@@ -50,18 +48,18 @@ class NavBar extends React.Component {
           <div className={`navbar-menu ${this.state.navMobileOpen ? 'is-active' : ''}`}>
             <div className="navbar-end">
               <div className="navbar-item">
-                <Link className="navbar-edited" to="/services">Services</Link>
+                {isLoggedIn && <Link className="navbar-edited" to="/services">Services</Link>}
               </div>
 
               <div className="navbar-item">
-                <Link className="navbar-edited" to="/register">Register</Link>
+                {!isLoggedIn && <Link className="navbar-edited" to="/register">Register</Link>}
               </div>
 
               <div className="navbar-item">
-                <Link className="navbar-edited" to="/login">Login</Link>
+                {!isLoggedIn && <Link className="navbar-edited" to="/login">Login</Link>}
               </div>
 
-              {/* <div className="navbar-item has-dropdown is-hoverable navbar-name">
+              <div className="navbar-item has-dropdown is-hoverable navbar-name">
 
                 <div className="navbar-dropdown">
                   <div className="navbar-edited">
@@ -69,12 +67,12 @@ class NavBar extends React.Component {
                       onClick={() => this.handleLogout()}
                       className="navbar-item dropdown-item"
                     >
-                      Log out
+                      {isLoggedIn &&  <Link className="navbar-edited">Log out</Link> }
                     </div>
                   </div>
                 </div>
 
-              </div> */}
+              </div>
 
 
             </div>

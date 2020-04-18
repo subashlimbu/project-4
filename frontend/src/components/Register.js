@@ -11,10 +11,13 @@ class Register extends React.Component {
       data: {
         email: '',
         username: '',
+        first_name: '',
+        last_name: '',
         age: '',
         phone_number: '',
         password: '',
         password_confirmation: ''
+        // user_type: ''
       },
       erros: {}
     }
@@ -42,8 +45,12 @@ class Register extends React.Component {
         <input onChange={(event) => this.handleChange(event)} name="email" type="text"/>
         <label>Username</label>
         <input onChange={(event) => this.handleChange(event)} name="username" type="text"/>
+        <label>First Name</label>
+        <input onChange={(event) => this.handleChange(event)} name="first_name" type="text"/>
+        <label>Last Name</label>
+        <input onChange={(event) => this.handleChange(event)} name="last_name" type="text"/>
         <label>Age</label>
-        <input onChange={(event) => this.handleChange(event)} name="age" type="text"/>
+        <input onChange={(event) => this.handleChange(event)} name="age" type="number"/>
         <label>Phone Number</label>
         <input onChange={(event) => this.handleChange(event)} name="phone_number" type="number"/>
         <label>Password</label>
@@ -51,6 +58,11 @@ class Register extends React.Component {
         <label>Confirm Password</label>
         <input 
           onChange={(event) => this.handleChange(event)} type="password" name="password_confirmation"/>
+        {/* <label>User Type</label>
+        <select value={this.state.user_type} onChange={(event) => this.handleChange(event)} name="user_type">
+          <option value="Business">Business</option>
+          <option value="Individual">Individual</option>
+        </select> */}
         <button>Register</button>
       </form>
     </div>
