@@ -34,10 +34,12 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('image', 'firstname', 'lastname', 'age', 'phone_number', 'user_type')
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'image', 'age', 'phone_number', 'user_type')
+
 
 class PopulateAppointmentSerializer(serializers.ModelSerializer):
     services = ServiceSerializer(many=True)
+    user = UserSerializer()
     
     class Meta:
         model = Appointment

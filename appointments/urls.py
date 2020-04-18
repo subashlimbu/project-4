@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ListView, DetailView, ServiceListView, ServiceDetailView, CategoryListView, CategoryDetailView
+from .views import ListView, DetailView, ServiceListView, ServiceDetailView, CategoryListView, CategoryDetailView, UserDetailView
 
 urlpatterns = [
     path('', ListView.as_view()),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('services/<int:pk>/', ServiceDetailView.as_view()),
     path('category/', CategoryListView.as_view()),
     path('category/<int:pk>/', CategoryDetailView.as_view()),
+    path('user/<int:pk>/', UserDetailView.as_view()),
 ]

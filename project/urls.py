@@ -23,6 +23,7 @@ urlpatterns = [
     path('api/', include('jwt_auth.urls')),
     path('api/services/', include('appointments.urls')),
     path('api/category/', include('appointments.urls')),
+    path('api/user/', include('appointments.urls')),
     
     # path('emails/', include('appointments.urls'))
 ]
