@@ -1,2608 +1,2608 @@
 [
-{
-  "model": "appointments.category",
-  "pk": 1,
-  "fields": {
-    "category": "HAEMATOLOGY"
+  {
+    "model": "appointments.category",
+    "pk": 1,
+    "fields": {
+      "category": "HAEMATOLOGY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 2,
+    "fields": {
+      "category": "COAGULATION"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 3,
+    "fields": {
+      "category": "SEROLOGY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 4,
+    "fields": {
+      "category": "URINE-SPECIALS"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 5,
+    "fields": {
+      "category": "FAECES & COPROLOGY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 6,
+    "fields": {
+      "category": "IMMUNOLOGY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 7,
+    "fields": {
+      "category": "BACTERIOLOGY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 8,
+    "fields": {
+      "category": "BIOCHEMISTRY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 9,
+    "fields": {
+      "category": "DRUGS INVESTIGATION"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 10,
+    "fields": {
+      "category": "HORMONES - IMMUNOCHEMISTRY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 11,
+    "fields": {
+      "category": "INV. INFECTIOUS DISEASES"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 12,
+    "fields": {
+      "category": "TUMORAL MARKERS"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 13,
+    "fields": {
+      "category": "PATHOLOGIC ANATOMY"
+    }
+  },
+  {
+    "model": "appointments.category",
+    "pk": 14,
+    "fields": {
+      "category": "ALERGEOLOGY"
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 1,
+    "fields": {
+      "service_name": "Hematic biometrics 20 parameters",
+      "delivery_time": "B1",
+      "private_price": "4.00",
+      "business_price": "5.00",
+      "category": 1
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 2,
+    "fields": {
+      "service_name": "Haemoglobin, Hematocrit",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 1
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 3,
+    "fields": {
+      "service_name": "Globular Sedimentation Rate",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 1
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 4,
+    "fields": {
+      "service_name": "Blood Type Factor and Group",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 1
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 5,
+    "fields": {
+      "service_name": "Direct Coombs",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "6.00",
+      "category": 1
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 6,
+    "fields": {
+      "service_name": "Indirect Coombs",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "8.00",
+      "category": 1
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 7,
+    "fields": {
+      "service_name": "Smear Hemoparasites investigation",
+      "delivery_time": "B1",
+      "private_price": "4.00",
+      "business_price": "2.99",
+      "category": 1
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 8,
+    "fields": {
+      "service_name": "Prothrombin Time",
+      "delivery_time": "B1",
+      "private_price": "6.00",
+      "business_price": "4.50",
+      "category": 2
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 9,
+    "fields": {
+      "service_name": "Fibrinogen",
+      "delivery_time": "B1",
+      "private_price": "13.00",
+      "business_price": "9.00",
+      "category": 2
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 10,
+    "fields": {
+      "service_name": "Coagulation Time",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.00",
+      "category": 2
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 11,
+    "fields": {
+      "service_name": "Haemorrhage Time",
+      "delivery_time": "B1",
+      "private_price": "2.00",
+      "business_price": "3.50",
+      "category": 2
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 12,
+    "fields": {
+      "service_name": "Thrombotic Thrombocytopenic Purpura (TTP)",
+      "delivery_time": "B1",
+      "private_price": "6.00",
+      "business_price": "4.50",
+      "category": 2
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 13,
+    "fields": {
+      "service_name": "Febrile Agglutinations",
+      "delivery_time": "B1",
+      "private_price": "9.00",
+      "business_price": "6.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 14,
+    "fields": {
+      "service_name": "Quantitative Reactive Protein C",
+      "delivery_time": "B1",
+      "private_price": "8.00",
+      "business_price": "5.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 15,
+    "fields": {
+      "service_name": "Quantitative Rheumatoid Factor",
+      "delivery_time": "B1",
+      "private_price": "8.00",
+      "business_price": "5.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 16,
+    "fields": {
+      "service_name": "Quantitative Antistreptolysin O (ASTO)",
+      "delivery_time": "B1",
+      "private_price": "8.00",
+      "business_price": "5.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 17,
+    "fields": {
+      "service_name": "V.D.R.L",
+      "delivery_time": "B1",
+      "private_price": "3.00",
+      "business_price": "2.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 18,
+    "fields": {
+      "service_name": "Creatinine Clearance",
+      "delivery_time": "B1",
+      "private_price": "9.00",
+      "business_price": "6.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 19,
+    "fields": {
+      "service_name": "Elemental and Microscopic Urine",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 4
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 20,
+    "fields": {
+      "service_name": "Quantitative Microalbuminuria",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "7.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 21,
+    "fields": {
+      "service_name": "Urine Pregnancy Test",
+      "delivery_time": "B1",
+      "private_price": "6.50",
+      "business_price": "5.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 22,
+    "fields": {
+      "service_name": "Proteinuria",
+      "delivery_time": "B1",
+      "private_price": "8.00",
+      "business_price": "6.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 23,
+    "fields": {
+      "service_name": "Polymorphonuclear INV",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 5
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 24,
+    "fields": {
+      "service_name": "Coproparasitic",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 5
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 25,
+    "fields": {
+      "service_name": "Internal Bleeding",
+      "delivery_time": "B1",
+      "private_price": "3.00",
+      "business_price": "2.00",
+      "category": 5
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 26,
+    "fields": {
+      "service_name": "C3 (complement)",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 6
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 27,
+    "fields": {
+      "service_name": "C4 (complement)",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 6
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 28,
+    "fields": {
+      "service_name": "lgA",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 6
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 29,
+    "fields": {
+      "service_name": "lgE",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 6
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 30,
+    "fields": {
+      "service_name": "lgG",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 6
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 31,
+    "fields": {
+      "service_name": "lgM",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 6
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 32,
+    "fields": {
+      "service_name": "BAAR Stain (Ziehl)",
+      "delivery_time": "B1",
+      "private_price": "4.00",
+      "business_price": "3.00",
+      "category": 7
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 33,
+    "fields": {
+      "service_name": "Stool Culture",
+      "delivery_time": "BS",
+      "private_price": "14.00",
+      "business_price": "11.00",
+      "category": 7
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 34,
+    "fields": {
+      "service_name": "Vaginal Discharge",
+      "delivery_time": "BS",
+      "private_price": "7.00",
+      "business_price": "5.00",
+      "category": 7
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 35,
+    "fields": {
+      "service_name": "Antimicrobial Susceptibility",
+      "delivery_time": "BS",
+      "private_price": "13.00",
+      "business_price": "11.00",
+      "category": 7
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 36,
+    "fields": {
+      "service_name": "GRAM Stain",
+      "delivery_time": "B1",
+      "private_price": "3.00",
+      "business_price": "2.00",
+      "category": 7
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 37,
+    "fields": {
+      "service_name": "Fresh Tissue Analysis",
+      "delivery_time": "B1",
+      "private_price": "3.00",
+      "business_price": "2.00",
+      "category": 7
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 38,
+    "fields": {
+      "service_name": "Direct Fungi Research (KOH)",
+      "delivery_time": "B1",
+      "private_price": "4.00",
+      "business_price": "2.50",
+      "category": 7
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 39,
+    "fields": {
+      "service_name": "Uric acid",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 40,
+    "fields": {
+      "service_name": "Uric acid in the urine",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 41,
+    "fields": {
+      "service_name": "Albumin",
+      "delivery_time": "B1",
+      "private_price": "4.00",
+      "business_price": "3.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 42,
+    "fields": {
+      "service_name": "Ethyl alcohol in blood",
+      "delivery_time": "B1",
+      "private_price": "40.00",
+      "business_price": "30.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 43,
+    "fields": {
+      "service_name": "Amylase",
+      "delivery_time": "B1",
+      "private_price": "4.00",
+      "business_price": "3.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 44,
+    "fields": {
+      "service_name": "Total Bilirubin, Direct and Indirect",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "7.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 45,
+    "fields": {
+      "service_name": "Serum calcium",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 46,
+    "fields": {
+      "service_name": "Total Cholesterol",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 47,
+    "fields": {
+      "service_name": "Cholesterol HDL",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 48,
+    "fields": {
+      "service_name": "Cholesterol LDL",
+      "delivery_time": "B1",
+      "private_price": "3.00",
+      "business_price": "2.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 49,
+    "fields": {
+      "service_name": "Acetylcholinesterase (Total Blood)",
+      "delivery_time": "B1",
+      "private_price": "8.50",
+      "business_price": "7.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 50,
+    "fields": {
+      "service_name": "Acetylcholinesterase (serum-plasma)",
+      "delivery_time": "B1",
+      "private_price": "7.50",
+      "business_price": "6.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 51,
+    "fields": {
+      "service_name": "Creatinine",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 52,
+    "fields": {
+      "service_name": "Creatinine in Urine",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 53,
+    "fields": {
+      "service_name": "Total Acid Phosphatase and Prostate",
+      "delivery_time": "B1",
+      "private_price": "11.00",
+      "business_price": "8.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 54,
+    "fields": {
+      "service_name": "Alkaline Phosphatase",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 55,
+    "fields": {
+      "service_name": "Fructosamine",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "9.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 56,
+    "fields": {
+      "service_name": "Glucose",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 57,
+    "fields": {
+      "service_name": "Haemoglobin Glucose (HbA1c)",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 58,
+    "fields": {
+      "service_name": "Iron Levels",
+      "delivery_time": "B1",
+      "private_price": "6.00",
+      "business_price": "5.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 59,
+    "fields": {
+      "service_name": "LDH",
+      "delivery_time": "B1",
+      "private_price": "6.00",
+      "business_price": "4.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 60,
+    "fields": {
+      "service_name": "Lipase",
+      "delivery_time": "B1",
+      "private_price": "6.00",
+      "business_price": "5.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 61,
+    "fields": {
+      "service_name": "Total Proteins",
+      "delivery_time": "B1",
+      "private_price": "4.00",
+      "business_price": "3.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 62,
+    "fields": {
+      "service_name": "Sodium Potassium Chloride Serum",
+      "delivery_time": "B1",
+      "private_price": "18.00",
+      "business_price": "14.00",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 63,
+    "fields": {
+      "service_name": "TGO / AST / TGP /ALT",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 64,
+    "fields": {
+      "service_name": "Triglycerides",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 65,
+    "fields": {
+      "service_name": "Urea U.V",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 66,
+    "fields": {
+      "service_name": "Urea in Urine",
+      "delivery_time": "B1",
+      "private_price": "3.50",
+      "business_price": "2.50",
+      "category": 8
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 67,
+    "fields": {
+      "service_name": "Amphetamines",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 9
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 68,
+    "fields": {
+      "service_name": "Benzodiazepines",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 9
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 69,
+    "fields": {
+      "service_name": "Cocaine",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 9
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 70,
+    "fields": {
+      "service_name": "Cannabis (THC)",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 9
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 71,
+    "fields": {
+      "service_name": "Methamphetamines",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 9
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 72,
+    "fields": {
+      "service_name": "Morphine",
+      "delivery_time": "B1",
+      "private_price": "14.00",
+      "business_price": "12.00",
+      "category": 9
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 73,
+    "fields": {
+      "service_name": "2 Drugs in Urine (Cocaine, Cannabis)",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 9
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 74,
+    "fields": {
+      "service_name": "TSH",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "10.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 75,
+    "fields": {
+      "service_name": "T3",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "10.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 76,
+    "fields": {
+      "service_name": "FT4",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "10.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 77,
+    "fields": {
+      "service_name": "T4 Total",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "10.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 78,
+    "fields": {
+      "service_name": "Folic acid (Folates)",
+      "delivery_time": "B1",
+      "private_price": "18.00",
+      "business_price": "16.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 79,
+    "fields": {
+      "service_name": "Estradiol",
+      "delivery_time": "B1",
+      "private_price": "16.00",
+      "business_price": "14.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 80,
+    "fields": {
+      "service_name": "Beta H.C.G.",
+      "delivery_time": "B1",
+      "private_price": "16.00",
+      "business_price": "14.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 81,
+    "fields": {
+      "service_name": "Follicle Stimulating Hormone (FSH)",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "15.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 82,
+    "fields": {
+      "service_name": "Luteinizing Hormone (LH)",
+      "delivery_time": "B1",
+      "private_price": "14.00",
+      "business_price": "14.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 83,
+    "fields": {
+      "service_name": "Insulin",
+      "delivery_time": "B1",
+      "private_price": "16.00",
+      "business_price": "14.00",
+      "category": 10
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 84,
+    "fields": {
+      "service_name": "Cytomegalovirus IgG",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 85,
+    "fields": {
+      "service_name": "Cytomegalovirus IgM",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 86,
+    "fields": {
+      "service_name": "Dengue IgG and IgM",
+      "delivery_time": "B1",
+      "private_price": "25.00",
+      "business_price": "22.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 87,
+    "fields": {
+      "service_name": "Rotavirus",
+      "delivery_time": "B1",
+      "private_price": "9.00",
+      "business_price": "7.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 88,
+    "fields": {
+      "service_name": "Coronavirus",
+      "delivery_time": "B6",
+      "private_price": "6.90",
+      "business_price": "6.69",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 89,
+    "fields": {
+      "service_name": "Helicobacter Pylori in Faeces",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "9.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 90,
+    "fields": {
+      "service_name": "Helicobacter Pylori IgG Quantitative",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "9.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 91,
+    "fields": {
+      "service_name": "Helicobacter Pylori IgM Quantitative",
+      "delivery_time": "B3",
+      "private_price": "12.00",
+      "business_price": "9.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 92,
+    "fields": {
+      "service_name": "Herpes 1-IgG",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 93,
+    "fields": {
+      "service_name": "Herpes 1-IgM",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 94,
+    "fields": {
+      "service_name": "Herpes 2-IgG",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 95,
+    "fields": {
+      "service_name": "Herpes 2-IgM",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 96,
+    "fields": {
+      "service_name": "Rubella IgG",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 97,
+    "fields": {
+      "service_name": "Rubella IgM",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 98,
+    "fields": {
+      "service_name": "Toxoplasma lgG",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 99,
+    "fields": {
+      "service_name": "Toxoplasma lgM",
+      "delivery_time": "B2",
+      "private_price": "10.00",
+      "business_price": "8.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 100,
+    "fields": {
+      "service_name": "HIV",
+      "delivery_time": "B1",
+      "private_price": "10.00",
+      "business_price": "6.00",
+      "category": 11
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 101,
+    "fields": {
+      "service_name": "Prostate-Specific Antigen (PSA)",
+      "delivery_time": "B1",
+      "private_price": "12.00",
+      "business_price": "9.00",
+      "category": 12
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 102,
+    "fields": {
+      "service_name": "Free PSA",
+      "delivery_time": "B1",
+      "private_price": "16.00",
+      "business_price": "14.00",
+      "category": 12
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 103,
+    "fields": {
+      "service_name": "Spermatogram",
+      "delivery_time": "B1",
+      "private_price": "20.00",
+      "business_price": "16.00",
+      "category": 13
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 104,
+    "fields": {
+      "service_name": "FUNGIC PANEL 1  (penicillium, cladosporium, aspergillus, candida albicans, alternaria tenuis)",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 105,
+    "fields": {
+      "service_name": "FOOD PANEL 1 (peanut, hazelnut, brasil nut, almond, coconut)",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 106,
+    "fields": {
+      "service_name": "FOOD PANEL 3 (Wheat, Oats, Sesame and Black Wheat). (FP3)",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 107,
+    "fields": {
+      "service_name": "FOOD PANEL 5 (egg white, milk, cod, wheat, peanuts, soy)",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 108,
+    "fields": {
+      "service_name": "FOOD PANEL 7 (egg white, milk, wheat, rice)",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 109,
+    "fields": {
+      "service_name": "ANIMAL PANEL 1 (dander from: cat, horse, cow, dog)",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 110,
+    "fields": {
+      "service_name": "FEATHERS PANEL",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 111,
+    "fields": {
+      "service_name": "SEAFOOD PANEL 2",
+      "delivery_time": "B3",
+      "private_price": "78.00",
+      "business_price": "50.70",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 112,
+    "fields": {
+      "service_name": "COMMON PASTURES PANEL",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 113,
+    "fields": {
+      "service_name": "DUST PANEL",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 114,
+    "fields": {
+      "service_name": "MITES PANEL",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 115,
+    "fields": {
+      "service_name": "RAST of Common Mite (SIRO)",
+      "delivery_time": "B3",
+      "private_price": "67.00",
+      "business_price": "43.55",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 116,
+    "fields": {
+      "service_name": "RAST of Almonds",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 117,
+    "fields": {
+      "service_name": "RAST of Avocado",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 118,
+    "fields": {
+      "service_name": "RAST of Garlic",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 119,
+    "fields": {
+      "service_name": "RAST of Sesame",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 120,
+    "fields": {
+      "service_name": "RAST of Alfa Lactoalbumina",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 121,
+    "fields": {
+      "service_name": "RAST of Penicillin V",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 122,
+    "fields": {
+      "service_name": "RAST of Penicillin G",
+      "delivery_time": "B1",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 123,
+    "fields": {
+      "service_name": "RAST of  Alternaria Tenuis",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 124,
+    "fields": {
+      "service_name": "RAST of Ampicllin",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 125,
+    "fields": {
+      "service_name": "RAST of Celery",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 126,
+    "fields": {
+      "service_name": "RAST of Amoxicilina Antibodies IgG",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 127,
+    "fields": {
+      "service_name": "RAST of Rice",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 128,
+    "fields": {
+      "service_name": "RAST of Glyciphagus Domesticus",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 129,
+    "fields": {
+      "service_name": "Aspergillus Fumigatus Allergen, Antibodies lgE",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 130,
+    "fields": {
+      "service_name": "RAST of Tuna",
+      "delivery_time": "B3",
+      "private_price": "40.00",
+      "business_price": "25.74",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 131,
+    "fields": {
+      "service_name": "RAST of Hazelnut",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 132,
+    "fields": {
+      "service_name": "RAST of Oats",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 133,
+    "fields": {
+      "service_name": "RAST of Codfish",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 134,
+    "fields": {
+      "service_name": "RAST of Beta Lactoglobulin",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 135,
+    "fields": {
+      "service_name": "RAST of Coffee",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 136,
+    "fields": {
+      "service_name": "RAST of Pumpkin",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 137,
+    "fields": {
+      "service_name": "RAST of Shrimp",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 138,
+    "fields": {
+      "service_name": "Candida Albicans Allergen, lgE Antibodies",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 139,
+    "fields": {
+      "service_name": "RAST of Crab",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 140,
+    "fields": {
+      "service_name": "RAST of Pork Meat",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 141,
+    "fields": {
+      "service_name": "RAST of Hollister Dust",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 142,
+    "fields": {
+      "service_name": "RAST of  Chironomus Plumosus",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 143,
+    "fields": {
+      "service_name": "RAST of  Lamb Meat",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 144,
+    "fields": {
+      "service_name": "RAST of  Beef Meat",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 145,
+    "fields": {
+      "service_name": "RAST of  Casein",
+      "delivery_time": "B1",
+      "private_price": "44.00",
+      "business_price": "40.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 146,
+    "fields": {
+      "service_name": "RAST of  Cat's Dandruff",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 147,
+    "fields": {
+      "service_name": "RAST of  Dog's Dandruff",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 148,
+    "fields": {
+      "service_name": "RAST of Cow's Dandruff",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 149,
+    "fields": {
+      "service_name": "RAST of Horse's Dandruff",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 150,
+    "fields": {
+      "service_name": "RAST of Barley",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 151,
+    "fields": {
+      "service_name": "Allergies due to the manual input of database",
+      "delivery_time": "B7",
+      "private_price": "1.00",
+      "business_price": "0.01",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 152,
+    "fields": {
+      "service_name": "RAST of Onions",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 153,
+    "fields": {
+      "service_name": "RAST of Bermuda Grass",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 154,
+    "fields": {
+      "service_name": "RAST of Rye",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.44",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 155,
+    "fields": {
+      "service_name": "RAST of Chocolate",
+      "delivery_time": "B3",
+      "private_price": "50.00",
+      "business_price": "25.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 156,
+    "fields": {
+      "service_name": "RAST of Cladosporium Herbarium",
+      "delivery_time": "B3",
+      "private_price": "50.00",
+      "business_price": "25.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 157,
+    "fields": {
+      "service_name": "RAST of Egg White",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 158,
+    "fields": {
+      "service_name": "RAST of Coconut",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 160,
+    "fields": {
+      "service_name": "RAST of Cabbage",
+      "delivery_time": "B3",
+      "private_price": "75.00",
+      "business_price": "45.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 161,
+    "fields": {
+      "service_name": "RAST of Cauliflower",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 162,
+    "fields": {
+      "service_name": "RAST of Cockroach",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 163,
+    "fields": {
+      "service_name": "RAST of Dermatophagoides Farinae",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "34.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 164,
+    "fields": {
+      "service_name": "RAST of Dermatophagoides Microceras",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "34.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 165,
+    "fields": {
+      "service_name": "RAST of Dermatophagoides Pteronyssinus",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "34.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 166,
+    "fields": {
+      "service_name": "RAST of Peach",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 167,
+    "fields": {
+      "service_name": "RAST of Blomia Tropicalis",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 168,
+    "fields": {
+      "service_name": "RAST of White Bean",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 169,
+    "fields": {
+      "service_name": "RAST of Gluten",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 170,
+    "fields": {
+      "service_name": "RAST of Kiwi",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.44",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 171,
+    "fields": {
+      "service_name": "RAST of Lobster",
+      "delivery_time": "B3",
+      "private_price": "33.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 172,
+    "fields": {
+      "service_name": "RAST of Milk",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 173,
+    "fields": {
+      "service_name": "RAST of Lepigoglyphus Destructor",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 174,
+    "fields": {
+      "service_name": "RAST of Malt (Beer)",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 175,
+    "fields": {
+      "service_name": "RAST of Baker's Yeast",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 176,
+    "fields": {
+      "service_name": "RAST of Lemon",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 177,
+    "fields": {
+      "service_name": "RAST of Corn",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 178,
+    "fields": {
+      "service_name": "RAST of Mango",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 179,
+    "fields": {
+      "service_name": "RAST of Peanut",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 180,
+    "fields": {
+      "service_name": "RAST of Apple",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 181,
+    "fields": {
+      "service_name": "RAST of Cantaloupe",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 182,
+    "fields": {
+      "service_name": "RAST of Mosquito Bites",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 183,
+    "fields": {
+      "service_name": "RAST of Mustard",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 184,
+    "fields": {
+      "service_name": "RAST of Orange",
+      "delivery_time": "B3",
+      "private_price": "33.00",
+      "business_price": "22.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 185,
+    "fields": {
+      "service_name": "RAST of Nut",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "33.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 186,
+    "fields": {
+      "service_name": "RAST of Brazil Nut",
+      "delivery_time": "B3",
+      "private_price": "33.00",
+      "business_price": "22.00",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 187,
+    "fields": {
+      "service_name": "RAST of Oyster",
+      "delivery_time": "B3",
+      "private_price": "56.00",
+      "business_price": "37.28",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 188,
+    "fields": {
+      "service_name": "RAST of Papaya",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 189,
+    "fields": {
+      "service_name": "RAST of Potato",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 190,
+    "fields": {
+      "service_name": "RAST of Turkey",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 191,
+    "fields": {
+      "service_name": "RAST of Penicillium Notatum",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 192,
+    "fields": {
+      "service_name": "RAST of Cucumber",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 193,
+    "fields": {
+      "service_name": "RAST of Pear",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 194,
+    "fields": {
+      "service_name": "RAST of Parsley",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 195,
+    "fields": {
+      "service_name": "RAST of Pineapple",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 196,
+    "fields": {
+      "service_name": "RAST of Banana",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 197,
+    "fields": {
+      "service_name": "Chicken Meat Allergen, Antibodies lgE",
+      "delivery_time": "B3",
+      "private_price": "46.00",
+      "business_price": "30.03",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 198,
+    "fields": {
+      "service_name": "RAST of Chicken Feathers",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 199,
+    "fields": {
+      "service_name": "RAST of Domestic Dust",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 200,
+    "fields": {
+      "service_name": "RAST of Cheddar Cheese",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 201,
+    "fields": {
+      "service_name": "RAST of Salmon",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 202,
+    "fields": {
+      "service_name": "RAST of Willow",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 203,
+    "fields": {
+      "service_name": "RAST of Corn Pollen",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 204,
+    "fields": {
+      "service_name": "RAST of Fennel Seeds",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 205,
+    "fields": {
+      "service_name": "RAST of Soy",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 206,
+    "fields": {
+      "service_name": "RAST of Thyrophagus Putrescentiae",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 207,
+    "fields": {
+      "service_name": "RAST of Tomato",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 208,
+    "fields": {
+      "service_name": "RAST of Grapefruit",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 209,
+    "fields": {
+      "service_name": "RAST of Wheat",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 210,
+    "fields": {
+      "service_name": "RAST of Titatium",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 211,
+    "fields": {
+      "service_name": "RAST of Clam",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 212,
+    "fields": {
+      "service_name": "RAST of Trout",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 213,
+    "fields": {
+      "service_name": "RAST of Grapes",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 214,
+    "fields": {
+      "service_name": "RAST of Vanilla",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 215,
+    "fields": {
+      "service_name": "Bee's Venom Allergen, Antibodies lgE",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 216,
+    "fields": {
+      "service_name": "RAST of Wasp Venom",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 217,
+    "fields": {
+      "service_name": "RAST of Yolk",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 218,
+    "fields": {
+      "service_name": "RAST of Carrot",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 219,
+    "fields": {
+      "service_name": "RAST of Cynodon Dactylon",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 220,
+    "fields": {
+      "service_name": "RAST of Lolium Perenne",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 221,
+    "fields": {
+      "service_name": "RAST of Mackerel (Fish)",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 222,
+    "fields": {
+      "service_name": "RAST of Mussel",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 223,
+    "fields": {
+      "service_name": "RAST of Anise",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 224,
+    "fields": {
+      "service_name": "RAST of Iodine",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 225,
+    "fields": {
+      "service_name": "RAST of Common Grass",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 226,
+    "fields": {
+      "service_name": "RAST of Epithelium and Pigeon Excrements",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 227,
+    "fields": {
+      "service_name": "RAST of Latex",
+      "delivery_time": "B3",
+      "private_price": "36.00",
+      "business_price": "23.40",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 228,
+    "fields": {
+      "service_name": "RAST of Strawberries",
+      "delivery_time": "B3",
+      "private_price": "32.00",
+      "business_price": "20.62",
+      "category": 14
+    }
+  },
+  {
+    "model": "appointments.service",
+    "pk": 229,
+    "fields": {
+      "service_name": "RAST of Ethylene Oxyde",
+      "delivery_time": "B3",
+      "private_price": "44.00",
+      "business_price": "28.73",
+      "category": 14
+    }
   }
-},
-{
-  "model": "appointments.category",
-  "pk": 2,
-  "fields": {
-    "category": "COAGULATION"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 3,
-  "fields": {
-    "category": "SEROLOGY"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 4,
-  "fields": {
-    "category": "URINE-SPECIALS"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 5,
-  "fields": {
-    "category": "FAECES & COPROLOGY"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 6,
-  "fields": {
-    "category": "IMMUNOLOGY"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 7,
-  "fields": {
-    "category": "BACTERIOLOGY"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 8,
-  "fields": {
-    "category": "BIOCHEMISTRY"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 9,
-  "fields": {
-    "category": "DRUGS INVESTIGATION"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 10,
-  "fields": {
-    "category": "HORMONES - IMMUNOCHEMISTRY"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 11,
-  "fields": {
-    "category": "INV. INFECTIOUS DISEASES"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 12,
-  "fields": {
-    "category": "TUMORAL MARKERS"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 13,
-  "fields": {
-    "category": "PATHOLOGIC ANATOMY"
-  }
-},
-{
-  "model": "appointments.category",
-  "pk": 14,
-  "fields": {
-    "category": "ALERGEOLOGY"
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 1,
-  "fields": {
-    "service_name": "Hematic biometrics 20 parameters",
-    "delivery_time": "B1",
-    "private_price": "4.00",
-    "business_price": "5.00",
-    "category": 1
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 2,
-  "fields": {
-    "service_name": "Haemoglobin, Hematocrit",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 1
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 3,
-  "fields": {
-    "service_name": "Globular Sedimentation Rate",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 1
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 4,
-  "fields": {
-    "service_name": "Blood Type Factor and Group",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 1
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 5,
-  "fields": {
-    "service_name": "Direct Coombs",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "6.00",
-    "category": 1
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 6,
-  "fields": {
-    "service_name": "Indirect Coombs",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "8.00",
-    "category": 1
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 7,
-  "fields": {
-    "service_name": "Smear Hemoparasites investigation",
-    "delivery_time": "B1",
-    "private_price": "4.00",
-    "business_price": "2.99",
-    "category": 1
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 8,
-  "fields": {
-    "service_name": "Prothrombin Time",
-    "delivery_time": "B1",
-    "private_price": "6.00",
-    "business_price": "4.50",
-    "category": 2
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 9,
-  "fields": {
-    "service_name": "Fibrinogen",
-    "delivery_time": "B1",
-    "private_price": "13.00",
-    "business_price": "9.00",
-    "category": 2
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 10,
-  "fields": {
-    "service_name": "Coagulation Time",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.00",
-    "category": 2
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 11,
-  "fields": {
-    "service_name": "Haemorrhage Time",
-    "delivery_time": "B1",
-    "private_price": "2.00",
-    "business_price": "3.50",
-    "category": 2
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 12,
-  "fields": {
-    "service_name": "Thrombotic Thrombocytopenic Purpura (TTP)",
-    "delivery_time": "B1",
-    "private_price": "6.00",
-    "business_price": "4.50",
-    "category": 2
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 13,
-  "fields": {
-    "service_name": "Febrile Agglutinations",
-    "delivery_time": "B1",
-    "private_price": "9.00",
-    "business_price": "6.00",
-    "category": 3
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 14,
-  "fields": {
-    "service_name": "Quantitative Reactive Protein C",
-    "delivery_time": "B1",
-    "private_price": "8.00",
-    "business_price": "5.00",
-    "category": 3
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 15,
-  "fields": {
-    "service_name": "Quantitative Rheumatoid Factor",
-    "delivery_time": "B1",
-    "private_price": "8.00",
-    "business_price": "5.00",
-    "category": 3
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 16,
-  "fields": {
-    "service_name": "Quantitative Antistreptolysin O (ASTO)",
-    "delivery_time": "B1",
-    "private_price": "8.00",
-    "business_price": "5.00",
-    "category": 3
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 17,
-  "fields": {
-    "service_name": "V.D.R.L",
-    "delivery_time": "B1",
-    "private_price": "3.00",
-    "business_price": "2.00",
-    "category": 3
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 18,
-  "fields": {
-    "service_name": "Creatinine Clearance",
-    "delivery_time": "B1",
-    "private_price": "9.00",
-    "business_price": "6.00",
-    "category": 4
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 19,
-  "fields": {
-    "service_name": "Elemental and Microscopic Urine",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 4
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 20,
-  "fields": {
-    "service_name": "Quantitative Microalbuminuria",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "7.00",
-    "category": 4
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 21,
-  "fields": {
-    "service_name": "Urine Pregnancy Test",
-    "delivery_time": "B1",
-    "private_price": "6.50",
-    "business_price": "5.00",
-    "category": 4
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 22,
-  "fields": {
-    "service_name": "Proteinuria",
-    "delivery_time": "B1",
-    "private_price": "8.00",
-    "business_price": "6.00",
-    "category": 4
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 23,
-  "fields": {
-    "service_name": "Polymorphonuclear INV",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 5
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 24,
-  "fields": {
-    "service_name": "Coproparasitic",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 5
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 25,
-  "fields": {
-    "service_name": "Internal Bleeding",
-    "delivery_time": "B1",
-    "private_price": "3.00",
-    "business_price": "2.00",
-    "category": 5
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 26,
-  "fields": {
-    "service_name": "C3 (complement)",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 6
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 27,
-  "fields": {
-    "service_name": "C4 (complement)",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 6
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 28,
-  "fields": {
-    "service_name": "lgA",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 6
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 29,
-  "fields": {
-    "service_name": "lgE",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 6
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 30,
-  "fields": {
-    "service_name": "lgG",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 6
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 31,
-  "fields": {
-    "service_name": "lgM",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 6
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 32,
-  "fields": {
-    "service_name": "BAAR Stain (Ziehl)",
-    "delivery_time": "B1",
-    "private_price": "4.00",
-    "business_price": "3.00",
-    "category": 7
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 33,
-  "fields": {
-    "service_name": "Stool Culture",
-    "delivery_time": "BS",
-    "private_price": "14.00",
-    "business_price": "11.00",
-    "category": 7
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 34,
-  "fields": {
-    "service_name": "Vaginal Discharge",
-    "delivery_time": "BS",
-    "private_price": "7.00",
-    "business_price": "5.00",
-    "category": 7
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 35,
-  "fields": {
-    "service_name": "Antimicrobial Susceptibility",
-    "delivery_time": "BS",
-    "private_price": "13.00",
-    "business_price": "11.00",
-    "category": 7
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 36,
-  "fields": {
-    "service_name": "GRAM Stain",
-    "delivery_time": "B1",
-    "private_price": "3.00",
-    "business_price": "2.00",
-    "category": 7
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 37,
-  "fields": {
-    "service_name": "Fresh Tissue Analysis",
-    "delivery_time": "B1",
-    "private_price": "3.00",
-    "business_price": "2.00",
-    "category": 7
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 38,
-  "fields": {
-    "service_name": "Direct Fungi Research (KOH)",
-    "delivery_time": "B1",
-    "private_price": "4.00",
-    "business_price": "2.50",
-    "category": 7
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 39,
-  "fields": {
-    "service_name": "Uric acid",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 40,
-  "fields": {
-    "service_name": "Uric acid in the urine",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 41,
-  "fields": {
-    "service_name": "Albumin",
-    "delivery_time": "B1",
-    "private_price": "4.00",
-    "business_price": "3.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 42,
-  "fields": {
-    "service_name": "Ethyl alcohol in blood",
-    "delivery_time": "B1",
-    "private_price": "40.00",
-    "business_price": "30.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 43,
-  "fields": {
-    "service_name": "Amylase",
-    "delivery_time": "B1",
-    "private_price": "4.00",
-    "business_price": "3.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 44,
-  "fields": {
-    "service_name": "Total Bilirubin, Direct and Indirect",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "7.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 45,
-  "fields": {
-    "service_name": "Serum calcium",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 46,
-  "fields": {
-    "service_name": "Total Cholesterol",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 47,
-  "fields": {
-    "service_name": "Cholesterol HDL",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 48,
-  "fields": {
-    "service_name": "Cholesterol LDL",
-    "delivery_time": "B1",
-    "private_price": "3.00",
-    "business_price": "2.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 49,
-  "fields": {
-    "service_name": "Acetylcholinesterase (Total Blood)",
-    "delivery_time": "B1",
-    "private_price": "8.50",
-    "business_price": "7.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 50,
-  "fields": {
-    "service_name": "Acetylcholinesterase (serum-plasma)",
-    "delivery_time": "B1",
-    "private_price": "7.50",
-    "business_price": "6.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 51,
-  "fields": {
-    "service_name": "Creatinine",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 52,
-  "fields": {
-    "service_name": "Creatinine in Urine",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 53,
-  "fields": {
-    "service_name": "Total Acid Phosphatase and Prostate",
-    "delivery_time": "B1",
-    "private_price": "11.00",
-    "business_price": "8.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 54,
-  "fields": {
-    "service_name": "Alkaline Phosphatase",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 55,
-  "fields": {
-    "service_name": "Fructosamine",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "9.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 56,
-  "fields": {
-    "service_name": "Glucose",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 57,
-  "fields": {
-    "service_name": "Haemoglobin Glucose (HbA1c)",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 58,
-  "fields": {
-    "service_name": "Iron Levels",
-    "delivery_time": "B1",
-    "private_price": "6.00",
-    "business_price": "5.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 59,
-  "fields": {
-    "service_name": "LDH",
-    "delivery_time": "B1",
-    "private_price": "6.00",
-    "business_price": "4.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 60,
-  "fields": {
-    "service_name": "Lipase",
-    "delivery_time": "B1",
-    "private_price": "6.00",
-    "business_price": "5.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 61,
-  "fields": {
-    "service_name": "Total Proteins",
-    "delivery_time": "B1",
-    "private_price": "4.00",
-    "business_price": "3.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 62,
-  "fields": {
-    "service_name": "Sodium Potassium Chloride Serum",
-    "delivery_time": "B1",
-    "private_price": "18.00",
-    "business_price": "14.00",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 63,
-  "fields": {
-    "service_name": "TGO / AST / TGP /ALT",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 64,
-  "fields": {
-    "service_name": "Triglycerides",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 65,
-  "fields": {
-    "service_name": "Urea U.V",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 66,
-  "fields": {
-    "service_name": "Urea in Urine",
-    "delivery_time": "B1",
-    "private_price": "3.50",
-    "business_price": "2.50",
-    "category": 8
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 67,
-  "fields": {
-    "service_name": "Amphetamines",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 9
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 68,
-  "fields": {
-    "service_name": "Benzodiazepines",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 9
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 69,
-  "fields": {
-    "service_name": "Cocaine",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 9
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 70,
-  "fields": {
-    "service_name": "Cannabis (THC)",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 9
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 71,
-  "fields": {
-    "service_name": "Methamphetamines",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 9
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 72,
-  "fields": {
-    "service_name": "Morphine",
-    "delivery_time": "B1",
-    "private_price": "14.00",
-    "business_price": "12.00",
-    "category": 9
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 73,
-  "fields": {
-    "service_name": "2 Drugs in Urine (Cocaine, Cannabis)",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 9
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 74,
-  "fields": {
-    "service_name": "TSH",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "10.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 75,
-  "fields": {
-    "service_name": "T3",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "10.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 76,
-  "fields": {
-    "service_name": "FT4",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "10.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 77,
-  "fields": {
-    "service_name": "T4 Total",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "10.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 78,
-  "fields": {
-    "service_name": "Folic acid (Folates)",
-    "delivery_time": "B1",
-    "private_price": "18.00",
-    "business_price": "16.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 79,
-  "fields": {
-    "service_name": "Estradiol",
-    "delivery_time": "B1",
-    "private_price": "16.00",
-    "business_price": "14.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 80,
-  "fields": {
-    "service_name": "Beta H.C.G.",
-    "delivery_time": "B1",
-    "private_price": "16.00",
-    "business_price": "14.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 81,
-  "fields": {
-    "service_name": "Follicle Stimulating Hormone (FSH)",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "15.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 82,
-  "fields": {
-    "service_name": "Luteinizing Hormone (LH)",
-    "delivery_time": "B1",
-    "private_price": "14.00",
-    "business_price": "14.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 83,
-  "fields": {
-    "service_name": "Insulin",
-    "delivery_time": "B1",
-    "private_price": "16.00",
-    "business_price": "14.00",
-    "category": 10
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 84,
-  "fields": {
-    "service_name": "Cytomegalovirus IgG",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 85,
-  "fields": {
-    "service_name": "Cytomegalovirus IgM",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 86,
-  "fields": {
-    "service_name": "Dengue IgG and IgM",
-    "delivery_time": "B1",
-    "private_price": "25.00",
-    "business_price": "22.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 87,
-  "fields": {
-    "service_name": "Rotavirus",
-    "delivery_time": "B1",
-    "private_price": "9.00",
-    "business_price": "7.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 88,
-  "fields": {
-    "service_name": "Coronavirus",
-    "delivery_time": "B6",
-    "private_price": "6.90",
-    "business_price": "6.69",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 89,
-  "fields": {
-    "service_name": "Helicobacter Pylori in Faeces",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "9.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 90,
-  "fields": {
-    "service_name": "Helicobacter Pylori IgG Quantitative",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "9.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 91,
-  "fields": {
-    "service_name": "Helicobacter Pylori IgM Quantitative",
-    "delivery_time": "B3",
-    "private_price": "12.00",
-    "business_price": "9.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 92,
-  "fields": {
-    "service_name": "Herpes 1-IgG",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 93,
-  "fields": {
-    "service_name": "Herpes 1-IgM",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 94,
-  "fields": {
-    "service_name": "Herpes 2-IgG",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 95,
-  "fields": {
-    "service_name": "Herpes 2-IgM",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 96,
-  "fields": {
-    "service_name": "Rubella IgG",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 97,
-  "fields": {
-    "service_name": "Rubella IgM",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 98,
-  "fields": {
-    "service_name": "Toxoplasma lgG",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 99,
-  "fields": {
-    "service_name": "Toxoplasma lgM",
-    "delivery_time": "B2",
-    "private_price": "10.00",
-    "business_price": "8.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 100,
-  "fields": {
-    "service_name": "HIV",
-    "delivery_time": "B1",
-    "private_price": "10.00",
-    "business_price": "6.00",
-    "category": 11
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 101,
-  "fields": {
-    "service_name": "Prostate-Specific Antigen (PSA)",
-    "delivery_time": "B1",
-    "private_price": "12.00",
-    "business_price": "9.00",
-    "category": 12
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 102,
-  "fields": {
-    "service_name": "Free PSA",
-    "delivery_time": "B1",
-    "private_price": "16.00",
-    "business_price": "14.00",
-    "category": 12
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 103,
-  "fields": {
-    "service_name": "Spermatogram",
-    "delivery_time": "B1",
-    "private_price": "20.00",
-    "business_price": "16.00",
-    "category": 13
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 104,
-  "fields": {
-    "service_name": "FUNGIC PANEL 1  (penicillium, cladosporium, aspergillus, candida albicans, alternaria tenuis)",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 105,
-  "fields": {
-    "service_name": "FOOD PANEL 1 (peanut, hazelnut, brasil nut, almond, coconut)",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 106,
-  "fields": {
-    "service_name": "FOOD PANEL 3 (Wheat, Oats, Sesame and Black Wheat). (FP3)",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 107,
-  "fields": {
-    "service_name": "FOOD PANEL 5 (egg white, milk, cod, wheat, peanuts, soy)",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 108,
-  "fields": {
-    "service_name": "FOOD PANEL 7 (egg white, milk, wheat, rice)",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 109,
-  "fields": {
-    "service_name": "ANIMAL PANEL 1 (dander from: cat, horse, cow, dog)",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 110,
-  "fields": {
-    "service_name": "FEATHERS PANEL",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 111,
-  "fields": {
-    "service_name": "SEAFOOD PANEL 2",
-    "delivery_time": "B3",
-    "private_price": "78.00",
-    "business_price": "50.70",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 112,
-  "fields": {
-    "service_name": "COMMON PASTURES PANEL",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 113,
-  "fields": {
-    "service_name": "DUST PANEL",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 114,
-  "fields": {
-    "service_name": "MITES PANEL",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 115,
-  "fields": {
-    "service_name": "RAST of Common Mite (SIRO)",
-    "delivery_time": "B3",
-    "private_price": "67.00",
-    "business_price": "43.55",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 116,
-  "fields": {
-    "service_name": "RAST of Almonds",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 117,
-  "fields": {
-    "service_name": "RAST of Avocado",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 118,
-  "fields": {
-    "service_name": "RAST of Garlic",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 119,
-  "fields": {
-    "service_name": "RAST of Sesame",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 120,
-  "fields": {
-    "service_name": "RAST of Alfa Lactoalbumina",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 121,
-  "fields": {
-    "service_name": "RAST of Penicillin V",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 122,
-  "fields": {
-    "service_name": "RAST of Penicillin G",
-    "delivery_time": "B1",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 123,
-  "fields": {
-    "service_name": "RAST of  Alternaria Tenuis",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 124,
-  "fields": {
-    "service_name": "RAST of Ampicllin",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 125,
-  "fields": {
-    "service_name": "RAST of Celery",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 126,
-  "fields": {
-    "service_name": "RAST of Amoxicilina Antibodies IgG",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 127,
-  "fields": {
-    "service_name": "RAST of Rice",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 128,
-  "fields": {
-    "service_name": "RAST of Glyciphagus Domesticus",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 129,
-  "fields": {
-    "service_name": "Aspergillus Fumigatus Allergen, Antibodies lgE",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 130,
-  "fields": {
-    "service_name": "RAST of Tuna",
-    "delivery_time": "B3",
-    "private_price": "40.00",
-    "business_price": "25.74",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 131,
-  "fields": {
-    "service_name": "RAST of Hazelnut",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 132,
-  "fields": {
-    "service_name": "RAST of Oats",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 133,
-  "fields": {
-    "service_name": "RAST of Codfish",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 134,
-  "fields": {
-    "service_name": "RAST of Beta Lactoglobulin",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 135,
-  "fields": {
-    "service_name": "RAST of Coffee",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 136,
-  "fields": {
-    "service_name": "RAST of Pumpkin",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 137,
-  "fields": {
-    "service_name": "RAST of Shrimp",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 138,
-  "fields": {
-    "service_name": "Candida Albicans Allergen, lgE Antibodies",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 139,
-  "fields": {
-    "service_name": "RAST of Crab",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 140,
-  "fields": {
-    "service_name": "RAST of Pork Meat",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 141,
-  "fields": {
-    "service_name": "RAST of Hollister Dust",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 142,
-  "fields": {
-    "service_name": "RAST of  Chironomus Plumosus",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 143,
-  "fields": {
-    "service_name": "RAST of  Lamb Meat",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 144,
-  "fields": {
-    "service_name": "RAST of  Beef Meat",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 145,
-  "fields": {
-    "service_name": "RAST of  Casein",
-    "delivery_time": "B1",
-    "private_price": "44.00",
-    "business_price": "40.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 146,
-  "fields": {
-    "service_name": "RAST of  Cat's Dandruff",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 147,
-  "fields": {
-    "service_name": "RAST of  Dog's Dandruff",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 148,
-  "fields": {
-    "service_name": "RAST of Cow's Dandruff",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 149,
-  "fields": {
-    "service_name": "RAST of Horse's Dandruff",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 150,
-  "fields": {
-    "service_name": "RAST of Barley",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 151,
-  "fields": {
-    "service_name": "Allergies due to the manual input of database",
-    "delivery_time": "B7",
-    "private_price": "1.00",
-    "business_price": "0.01",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 152,
-  "fields": {
-    "service_name": "RAST of Onions",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 153,
-  "fields": {
-    "service_name": "RAST of Bermuda Grass",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 154,
-  "fields": {
-    "service_name": "RAST of Rye",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.44",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 155,
-  "fields": {
-    "service_name": "RAST of Chocolate",
-    "delivery_time": "B3",
-    "private_price": "50.00",
-    "business_price": "25.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 156,
-  "fields": {
-    "service_name": "RAST of Cladosporium Herbarium",
-    "delivery_time": "B3",
-    "private_price": "50.00",
-    "business_price": "25.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 157,
-  "fields": {
-    "service_name": "RAST of Egg White",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 158,
-  "fields": {
-    "service_name": "RAST of Coconut",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 160,
-  "fields": {
-    "service_name": "RAST of Cabbage",
-    "delivery_time": "B3",
-    "private_price": "75.00",
-    "business_price": "45.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 161,
-  "fields": {
-    "service_name": "RAST of Cauliflower",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 162,
-  "fields": {
-    "service_name": "RAST of Cockroach",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 163,
-  "fields": {
-    "service_name": "RAST of Dermatophagoides Farinae",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "34.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 164,
-  "fields": {
-    "service_name": "RAST of Dermatophagoides Microceras",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "34.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 165,
-  "fields": {
-    "service_name": "RAST of Dermatophagoides Pteronyssinus",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "34.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 166,
-  "fields": {
-    "service_name": "RAST of Peach",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 167,
-  "fields": {
-    "service_name": "RAST of Blomia Tropicalis",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 168,
-  "fields": {
-    "service_name": "RAST of White Bean",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 169,
-  "fields": {
-    "service_name": "RAST of Gluten",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 170,
-  "fields": {
-    "service_name": "RAST of Kiwi",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.44",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 171,
-  "fields": {
-    "service_name": "RAST of Lobster",
-    "delivery_time": "B3",
-    "private_price": "33.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 172,
-  "fields": {
-    "service_name": "RAST of Milk",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 173,
-  "fields": {
-    "service_name": "RAST of Lepigoglyphus Destructor",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 174,
-  "fields": {
-    "service_name": "RAST of Malt (Beer)",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 175,
-  "fields": {
-    "service_name": "RAST of Baker's Yeast",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 176,
-  "fields": {
-    "service_name": "RAST of Lemon",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 177,
-  "fields": {
-    "service_name": "RAST of Corn",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 178,
-  "fields": {
-    "service_name": "RAST of Mango",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 179,
-  "fields": {
-    "service_name": "RAST of Peanut",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 180,
-  "fields": {
-    "service_name": "RAST of Apple",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 181,
-  "fields": {
-    "service_name": "RAST of Cantaloupe",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 182,
-  "fields": {
-    "service_name": "RAST of Mosquito Bites",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 183,
-  "fields": {
-    "service_name": "RAST of Mustard",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 184,
-  "fields": {
-    "service_name": "RAST of Orange",
-    "delivery_time": "B3",
-    "private_price": "33.00",
-    "business_price": "22.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 185,
-  "fields": {
-    "service_name": "RAST of Nut",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "33.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 186,
-  "fields": {
-    "service_name": "RAST of Brazil Nut",
-    "delivery_time": "B3",
-    "private_price": "33.00",
-    "business_price": "22.00",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 187,
-  "fields": {
-    "service_name": "RAST of Oyster",
-    "delivery_time": "B3",
-    "private_price": "56.00",
-    "business_price": "37.28",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 188,
-  "fields": {
-    "service_name": "RAST of Papaya",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 189,
-  "fields": {
-    "service_name": "RAST of Potato",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 190,
-  "fields": {
-    "service_name": "RAST of Turkey",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 191,
-  "fields": {
-    "service_name": "RAST of Penicillium Notatum",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 192,
-  "fields": {
-    "service_name": "RAST of Cucumber",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 193,
-  "fields": {
-    "service_name": "RAST of Pear",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 194,
-  "fields": {
-    "service_name": "RAST of Parsley",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 195,
-  "fields": {
-    "service_name": "RAST of Pineapple",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 196,
-  "fields": {
-    "service_name": "RAST of Banana",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 197,
-  "fields": {
-    "service_name": "Chicken Meat Allergen, Antibodies lgE",
-    "delivery_time": "B3",
-    "private_price": "46.00",
-    "business_price": "30.03",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 198,
-  "fields": {
-    "service_name": "RAST of Chicken Feathers",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 199,
-  "fields": {
-    "service_name": "RAST of Domestic Dust",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 200,
-  "fields": {
-    "service_name": "RAST of Cheddar Cheese",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 201,
-  "fields": {
-    "service_name": "RAST of Salmon",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 202,
-  "fields": {
-    "service_name": "RAST of Willow",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 203,
-  "fields": {
-    "service_name": "RAST of Corn Pollen",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 204,
-  "fields": {
-    "service_name": "RAST of Fennel Seeds",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 205,
-  "fields": {
-    "service_name": "RAST of Soy",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 206,
-  "fields": {
-    "service_name": "RAST of Thyrophagus Putrescentiae",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 207,
-  "fields": {
-    "service_name": "RAST of Tomato",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 208,
-  "fields": {
-    "service_name": "RAST of Grapefruit",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 209,
-  "fields": {
-    "service_name": "RAST of Wheat",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 210,
-  "fields": {
-    "service_name": "RAST of Titatium",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 211,
-  "fields": {
-    "service_name": "RAST of Clam",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 212,
-  "fields": {
-    "service_name": "RAST of Trout",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 213,
-  "fields": {
-    "service_name": "RAST of Grapes",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 214,
-  "fields": {
-    "service_name": "RAST of Vanilla",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 215,
-  "fields": {
-    "service_name": "Bee's Venom Allergen, Antibodies lgE",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 216,
-  "fields": {
-    "service_name": "RAST of Wasp Venom",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 217,
-  "fields": {
-    "service_name": "RAST of Yolk",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 218,
-  "fields": {
-    "service_name": "RAST of Carrot",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 219,
-  "fields": {
-    "service_name": "RAST of Cynodon Dactylon",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 220,
-  "fields": {
-    "service_name": "RAST of Lolium Perenne",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 221,
-  "fields": {
-    "service_name": "RAST of Mackerel (Fish)",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 222,
-  "fields": {
-    "service_name": "RAST of Mussel",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 223,
-  "fields": {
-    "service_name": "RAST of Anise",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 224,
-  "fields": {
-    "service_name": "RAST of Iodine",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 225,
-  "fields": {
-    "service_name": "RAST of Common Grass",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 226,
-  "fields": {
-    "service_name": "RAST of Epithelium and Pigeon Excrements",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 227,
-  "fields": {
-    "service_name": "RAST of Latex",
-    "delivery_time": "B3",
-    "private_price": "36.00",
-    "business_price": "23.40",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 228,
-  "fields": {
-    "service_name": "RAST of Strawberries",
-    "delivery_time": "B3",
-    "private_price": "32.00",
-    "business_price": "20.62",
-    "category": 14
-  }
-},
-{
-  "model": "appointments.service",
-  "pk": 229,
-  "fields": {
-    "service_name": "RAST of Ethylene Oxyde",
-    "delivery_time": "B3",
-    "private_price": "44.00",
-    "business_price": "28.73",
-    "category": 14
-  }
-}
 ]

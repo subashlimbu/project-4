@@ -2,49 +2,72 @@ from rest_framework.views import APIView # get the APIView class from DRF
 from rest_framework.response import Response # get the Response class from DRF
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-from .models import Appointment, Service
-from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer
+from .models import Appointment, Service, Category
+from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer, PopulateServiceSerializer, CategorySerializer
 
 # Create your views here.
+# Appointments
 class ListView(ListCreateAPIView): # extend the APIView
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
 
     def get(self, _request):
-        appointment = Appointment.objects.all() # get all the books
+        appointment = Appointment.objects.all()
         serializer = PopulateAppointmentSerializer(appointment, many=True)
 
         return Response(serializer.data) # send the JSON to the client
 
 
-class DetailView(APIView): # extend the APIView
+class DetailView(RetrieveUpdateDestroyAPIView): # extend the APIView
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
 
     def get(self, _request, pk):
-        appointment = Appointment.objects.get(pk=pk) # get a book by id (pk means primary key)
-        serializer = AppointmentSerializer(appointment)
+        appointment = Appointment.objects.get(pk=pk) # get the appointment by id (pk means primary key)
+        serializer = PopulateAppointmentSerializer(appointment)
 
-        return Response(serializer.data) # send the JSON to the client
+        return Response(serializer.data)
 
 
 # Services
-# class ServicesListView(ListCreateAPIView): # extend the APIView
-#     queryset = Services.objects.all()
-#     serializer_class = ServiceSerializer
+class ServiceListView(ListCreateAPIView):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
 
-#     def get(self, _request):
-#         services = Services.objects.all()
-#         serializer = ServiceSerializer(services, many=True)
+    def get(self, _request):
+        service = Service.objects.all()
+        serializer = PopulateServiceSerializer(service, many=True)
 
-#         return Response(serializer.data)
+        return Response(serializer.data)
 
-# class ServicesDetailView(RetrieveUpdateDestroyAPIView):
-#     queryset = Services.objects.all()
-#     serializer_class = ServiceSerializer
+class ServiceDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Service.objects.all()
+    serializer_class = ServiceSerializer
 
-#     def get(self, _request, pk):
-#         services = Services.objects.get(pk=pk)
-#         serializer = ServicesSerializer(services)
+    def get(self, _request, pk):
+        service = Service.objects.get(pk=pk)
+        serializer = PopulateServiceSerializer(service)
 
-#         return Response(serializer.data) # send the JSON to the client
+        return Response(serializer.data)
+
+
+# CategorySerializer
+class CategoryListView(ListCreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+    def get(self, _request):
+        category = Category.objects.all()
+        serializer = CategorySerializer(category, many=True)
+
+        return Response(serializer.data)
+
+class CategoryDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+    def get(self, _request, pk):
+        category = Category.objects.get(pk=pk)
+        serializer = CategorySerializer(category)
+
+        return Response(serializer.data)
