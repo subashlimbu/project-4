@@ -6,8 +6,8 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     image = models.ImageField(max_length=100)
-    firstname = models.CharField(max_length=50)
-    lastname = models.CharField(max_length=50)
+    # firstname = models.CharField(max_length=50)
+    # lastname = models.CharField(max_length=50)
     age = models.IntegerField(null=True)
     phone_number = models.IntegerField(null=True)
     BUSINESS = 'BA'

@@ -11,25 +11,25 @@ class ListView(ListCreateAPIView): # extend the APIView
     serializer_class = AppointmentSerializer
 
     def get(self, _request):
-        appointment = Appointment.objects.all() # get all the books
+        appointment = Appointment.objects.all()
         serializer = PopulateAppointmentSerializer(appointment, many=True)
 
         return Response(serializer.data) # send the JSON to the client
 
 
-class DetailView(APIView): # extend the APIView
+class DetailView(RetrieveUpdateDestroyAPIView): # extend the APIView
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
 
     def get(self, _request, pk):
-        appointment = Appointment.objects.get(pk=pk) # get a book by id (pk means primary key)
-        serializer = AppointmentSerializer(appointment)
+        appointment = Appointment.objects.get(pk=pk) # get the appointment by id (pk means primary key)
+        serializer = PopulateAppointmentSerializer(appointment)
 
-        return Response(serializer.data) # send the JSON to the client
+        return Response(serializer.data)
 
 
 # Services
-class ServiceListView(ListCreateAPIView): # extend the APIView
+class ServiceListView(ListCreateAPIView):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 
@@ -45,6 +45,6 @@ class ServiceDetailView(RetrieveUpdateDestroyAPIView):
 
     def get(self, _request, pk):
         services = Service.objects.get(pk=pk)
-        serializer = ServicesSerializer(services)
+        serializer = ServiceSerializer(services)
 
-        return Response(serializer.data) # send the JSON to the client
+        return Response(serializer.data)
