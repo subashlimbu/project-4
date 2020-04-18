@@ -30,7 +30,7 @@ class NavBar extends React.Component {
       <nav className="navbar is-black">
         <div className="container navbar-container">
           <div className="navbar-brand">
-            <Link className="navbar-item foodtitle" to="/">
+            <Link className="navbar-item foodtitle" to="/">Home
               {/* <FontAwesomeIcon icon={faUtensils} />  */}
             </Link>
             <a
@@ -49,6 +49,10 @@ class NavBar extends React.Component {
             <div className="navbar-end">
               <div className="navbar-item">
                 {isLoggedIn && <Link className="navbar-edited" to="/services">Services</Link>}
+              </div>
+              
+              <div className="navbar-item">
+                <Link className="navbar-edited" to="/profile">Profile</Link>
               </div>
 
               <div className="navbar-item">

@@ -53,8 +53,10 @@ class Service(models.Model):
 
 class Appointment(models.Model):
     appointment_date = models.DateTimeField()
-    services = models.ManyToManyField(Service, related_name="appointments", blank=False)
-    user = models.ForeignKey(User, related_name='appointments', on_delete=models.CASCADE)
+    services = models.ManyToManyField(
+        Service, related_name="appointments", blank=False)
+    user = models.ForeignKey(
+        User, related_name='appointments', on_delete=models.CASCADE)
 
     def __str__(self):
         return 'Appointment: {} {}'.format(self.id, self.appointment_date)

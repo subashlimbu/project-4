@@ -19,6 +19,6 @@ class User(AbstractUser):
         choices=USER_TYPE_CHOICES,
         default=INDIVIDUAL,
     )
-    
+
     def __str__(self):
         return self.username
