@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import auth from '../lib/auth'
 import { withRouter } from 'react-router-dom'
 
-
 class NavBar extends React.Component {
-
   constructor() {
     super()
     this.state = {
@@ -26,64 +24,83 @@ class NavBar extends React.Component {
 
   render() {
     const isLoggedIn = auth.isLoggedIn()
-    return <>
-      <nav className="navbar is-black">
-        <div className="container navbar-container">
-          <div className="navbar-brand">
-            <Link className="navbar-item foodtitle" to="/">Home
-              {/* <FontAwesomeIcon icon={faUtensils} />  */}
-            </Link>
-            <a
-              role="button"
-              className={`navbar-burger burger ${this.state.navMobileOpen ? 'is-active' : ''}`}
-              aria-label="menu"
-              aria-expanded="false"
-              onClick={() => this.setState({ navMobileOpen: !this.state.navMobileOpen })}
+    return (
+      <>
+        <nav className="navbar is-black">
+          <div className="container navbar-container">
+            <div className="navbar-brand">
+              <Link id="homeBtn" className="navbar-item foodtitle" to="/">
+                L.A.B.S
+                {/* <FontAwesomeIcon icon={faUtensils} />  */}
+              </Link>
+              <a
+                role="button"
+                className={`navbar-burger burger ${
+                  this.state.navMobileOpen ? 'is-active' : ''
+                }`}
+                aria-label="menu"
+                aria-expanded="false"
+                onClick={() =>
+                  this.setState({ navMobileOpen: !this.state.navMobileOpen })
+                }
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            <div
+              className={`navbar-menu ${
+                this.state.navMobileOpen ? 'is-active' : ''
+              }`}
             >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-          <div className={`navbar-menu ${this.state.navMobileOpen ? 'is-active' : ''}`}>
-            <div className="navbar-end">
-              <div className="navbar-item">
-                <Link className="navbar-edited" to="/services">Services</Link>
-              </div>
-              
-              <div className="navbar-item">
-                <Link className="navbar-edited" to="/profile">Profile</Link>
-              </div>
-
-              <div className="navbar-item">
-                {!isLoggedIn && <Link className="navbar-edited" to="/register">Register</Link>}
-              </div>
-
-              <div className="navbar-item">
-                {!isLoggedIn && <Link className="navbar-edited" to="/login">Login</Link>}
-              </div>
-              <div
-                onClick={() => this.handleLogout()}
-                className="navbar-item">
-                {isLoggedIn && <Link className="navbar-edited">Log out</Link> }
-              </div>
-
-              <div className="navbar-item has-dropdown is-hoverable navbar-name">
-
-                <div className="navbar-dropdown">
-                  <div className="navbar-edited">
-                  </div>
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <Link className="navbar-edited" to="/services">
+                    Services
+                  </Link>
                 </div>
 
+                <div className="navbar-item">
+                  <Link className="navbar-edited" to="/profile">
+                    Profile
+                  </Link>
+                </div>
+
+                <div className="navbar-item">
+                  {!isLoggedIn && (
+                    <Link className="navbar-edited" to="/register">
+                      Register
+                    </Link>
+                  )}
+                </div>
+
+                <div className="navbar-item">
+                  {!isLoggedIn && (
+                    <Link className="navbar-edited" to="/login">
+                      Login
+                    </Link>
+                  )}
+                </div>
+
+                <div
+                  onClick={() => this.handleLogout()}
+                  className="navbar-item"
+                >
+                  {isLoggedIn && <Link className="navbar-edited">Log out</Link>}
+                </div>
+
+                <div className="navbar-item has-dropdown is-hoverable navbar-name">
+                  <div className="navbar-dropdown">
+                    <div className="navbar-edited"></div>
+                  </div>
+                </div>
               </div>
-
-
             </div>
           </div>
-        </div>
-      </nav>
-
-    </>
+        </nav>
+      </>
+    )
   }
 }
 
