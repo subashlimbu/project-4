@@ -82,6 +82,7 @@ class NavBar extends React.Component {
                     </Link>
                   )}
                 </div>
+
                 <div
                   onClick={() => this.handleLogout()}
                   className="navbar-item"

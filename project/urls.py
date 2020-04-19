@@ -24,6 +24,6 @@ urlpatterns = [
     path('api/services/', include('appointments.urls')),
     path('api/category/', include('appointments.urls')),
     path('api/user/', include('appointments.urls')),
-    
-    # path('emails/', include('appointments.urls'))
+    path('api/emails/', include('mail.urls'))
+    # path('', include('mail.urls'))
 ]
