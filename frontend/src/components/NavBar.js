@@ -64,8 +64,7 @@ class NavBar extends React.Component {
               </div>
               <div
                 onClick={() => this.handleLogout()}
-                className="navbar-item"
-              >
+                className="navbar-item">
                 {isLoggedIn && <Link className="navbar-edited">Log out</Link> }
               </div>
 
