@@ -1,10 +1,43 @@
 * {
   box-sizing: border-box;
+  font-family: 'Philosopher', sans-serif;
 }
 
 body {
   margin: 0;
   justify-content: center;
+}
+#homeBtn {
+  background-color: black;
+  font-family: 'Ruslan Display', cursive;
+  font-size: 2em;
+  margin-top: 5px;
+  &:hover {
+    background-color: black;
+    animation: logo 2s;
+  }
+}
+@keyframes logo {
+  0% {
+    color: red;
+    left: 0px;
+  }
+  15% {
+    color: gold;
+    left: 25px;
+  }
+  50% {
+    color: blue;
+    left: -25px;
+  }
+  75% {
+    color: green;
+    left: 0px;
+  }
+  100% {
+    color: rgb(255, 255, 255);
+    left: 0px;
+  }
 }
 
 div.hero-body {
@@ -15,11 +48,23 @@ div.hero-body {
 }
 
 .navbar-edited {
-  color: white;
+  color: rgb(255, 255, 255);
   &:hover {
-    border-bottom: 2px solid white;
+    margin-top: 2px;
+    border-bottom: 1px solid white;
     color: teal;
   }
+}
+.is-active {
+  navbar-item {
+    width: 100vw;
+    :hover {
+      background-color: darkblue;
+    }
+  }
+  background-color: rgba(0, 0, 0, 0.363);
+  position: fixed;
+  width: 100vw;
 }
 
 .title,

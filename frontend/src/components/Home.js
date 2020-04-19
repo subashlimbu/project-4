@@ -6,14 +6,13 @@ import { withRouter } from 'react-router-dom'
 // import { Parallax } from 'react-parallax'
 // import NavBar from './NavBar'
 
-
 const Home = () => {
   return (
     <section className="Hero hero is-primary">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title is-1 has-text-warning has-text-centered">
-            Medical Booking System
+            Le Appointment Booking System
           </h1>
           <h2 className="subtitle is-6 has-text-grey-darker has-text-centered">
             Bookings made better...
@@ -21,8 +20,6 @@ const Home = () => {
         </div>
       </div>
     </section>
-  
   )
 }
 export default Home
-
