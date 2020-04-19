@@ -28,8 +28,8 @@ class Services extends React.Component {
       <>
         <div>
           <div>
-            {category.map((x) => {
-              return <h1>{x.category}</h1>
+            {category.map((x, i) => {
+              return <h1 key={i}>{x.category}</h1>
             })}
           </div>
         </div>
