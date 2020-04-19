@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'jwt_auth',
     'rest_framework',
     'frontend',
-    'appointments'
+    'appointments',
+    'mail',
 ]
 
 REST_FRAMEWORK = {
@@ -138,10 +139,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Handle images
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Email settings set-up
-# EMAIL_HOST = ''
-# EMAIL_PORT =
-# EMAIL_HOST_USER = ''
-# EMAIL_HOST_PASSWORD = ''
-# EMAIL_USE_TLS
-# EMAIL_USE_SSL = ''
+EMAIL_HOST = 'mail.btinternet.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'medbooking@btinternet.com'
+EMAIL_HOST_PASSWORD = 'project-4'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
