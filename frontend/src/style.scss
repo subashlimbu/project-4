@@ -8,12 +8,12 @@ body {
   justify-content: center;
 }
 #homeBtn {
-  background-color: black;
+  background-color: inherit;
   font-family: 'Ruslan Display', cursive;
   font-size: 2em;
   margin-top: 5px;
   &:hover {
-    background-color: black;
+    background-color: inherit;
     animation: logo 2s;
   }
 }

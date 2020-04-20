@@ -11,6 +11,12 @@ const Profile = () => {
     axios.get('/api/appointments/')
       .then((resp) => {
         setData(resp.data)
+
+          .then(res => {
+            const token = res.data.token
+            auth.setToken(token)
+          })
+
       })
   }, [])
 
