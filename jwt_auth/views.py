@@ -20,7 +20,6 @@ class RegisterView(CreateAPIView):
 
         return Response(serializer.errors, status=422)
 
-User = get_user_model()
 class LoginView(APIView):
 
     def get_user(self, email):
