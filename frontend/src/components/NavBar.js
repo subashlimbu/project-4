@@ -2,9 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import auth from '../lib/auth'
 import { withRouter } from 'react-router-dom'
-// import { GiHotMeal } from 'react-icons/gi'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faLaptopMedical } from '@fortawesome/free-solid-svg-icons'
 
 class NavBar extends React.Component {
   constructor() {
