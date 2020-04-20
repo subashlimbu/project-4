@@ -8,6 +8,8 @@ User = get_user_model()
 
 class Category(models.Model):
     category = models.CharField(max_length=50)
+    # Cannot use below becuse get a service is not defined error
+    # services = models.ForeignKey(Service, related_name='category', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = "categories"
@@ -43,8 +45,7 @@ class Service(models.Model):
     )
     private_price = models.DecimalField(max_digits=4, decimal_places=2)
     business_price = models.DecimalField(max_digits=4, decimal_places=2)
-    category = models.ForeignKey(
-        Category, related_name='services', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='services', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.service_name
@@ -52,8 +53,10 @@ class Service(models.Model):
 
 class Appointment(models.Model):
     appointment_date = models.DateTimeField()
-    services = models.ManyToManyField(Service, related_name="appointments", blank=False)
-    user = models.ForeignKey(User, related_name='appointments', on_delete=models.CASCADE)
+    services = models.ManyToManyField(
+        Service, related_name="appointments", blank=False)
+    user = models.ForeignKey(
+        User, related_name='appointments', on_delete=models.CASCADE)
 
     def __str__(self):
         return 'Appointment: {} {}'.format(self.id, self.appointment_date)

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'jwt_auth',
     'rest_framework',
     'frontend',
-    'appointments'
+    'appointments',
+    'mail',
 ]
 
 REST_FRAMEWORK = {
@@ -69,7 +70,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, '/appointments/', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,3 +138,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Handle images
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# Email settings set-up
+EMAIL_HOST = 'mail.btinternet.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'medbooking@btinternet.com'
+EMAIL_HOST_PASSWORD = 'project-4'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True

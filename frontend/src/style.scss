@@ -1,10 +1,43 @@
-*{
+* {
   box-sizing: border-box;
+  font-family: 'Philosopher', sans-serif;
 }
 
 body {
   margin: 0;
   justify-content: center;
+}
+#homeBtn {
+  background-color: inherit;
+  font-family: 'Ruslan Display', cursive;
+  font-size: 2em;
+  margin-top: 5px;
+  &:hover {
+    background-color: inherit;
+    animation: logo 2s;
+  }
+}
+@keyframes logo {
+  0% {
+    color: red;
+    left: 0px;
+  }
+  15% {
+    color: gold;
+    left: 25px;
+  }
+  50% {
+    color: blue;
+    left: -25px;
+  }
+  75% {
+    color: green;
+    left: 0px;
+  }
+  100% {
+    color: rgb(255, 255, 255);
+    left: 0px;
+  }
 }
 
 div.hero-body {
@@ -14,16 +47,117 @@ div.hero-body {
   justify-content: center;
 }
 
-.navbar-edited{
-  color: white;
-  &:hover{
-    border-bottom: 2px solid white;
+.navbar-edited {
+  color: rgb(255, 255, 255);
+  &:hover {
+    margin-top: 2px;
+    border-bottom: 1px solid white;
     color: teal;
   }
 }
+.is-active {
+  navbar-item {
+    width: 100vw;
+    :hover {
+      background-color: darkblue;
+    }
+  }
+  background-color: rgba(0, 0, 0, 0.363);
+  position: fixed;
+  width: 100vw;
+}
 
-.title, .subtitle {
+.title,
+.subtitle {
   margin: 20px;
   font-weight: bolder;
 }
 
+.servicePage {
+  max-height: 100vh;
+  overflow: scroll;
+  background-color: rgb(255, 242, 219);
+
+  .serviceFlex {
+    .categoryTitle {
+      background-color: blanchedalmond;
+      margin-top: 10px;
+      padding-left: 20px;
+      font-weight: 700;
+    }
+    .categoryAndService {
+      width: 100vw;
+      min-width: 500px;
+      .serviceWrap {
+        background-color: rgba(114, 19, 182, 0.5);
+        .serviceHeader {
+          display: flex;
+          padding-top: 3px;
+          margin-bottom: -24px;
+          background-color: rgb(0, 199, 43);
+          border: 2px solid rgb(11, 93, 0);
+
+          .headerBorder {
+            font-weight: 600;
+          }
+          #hsn {
+            padding-left: 20px;
+            padding-bottom: 5px;
+            margin-top: 3px;
+            width: 50vw;
+          }
+          #hdt {
+            margin-top: 3px;
+            width: 23vw;
+          }
+          #hp {
+            text-align: center;
+            margin-top: 3px;
+            width: 20vw;
+          }
+        }
+        .serviceNameFlex {
+          display: flex;
+          flex-direction: row;
+          #sn {
+            background-color: rgb(184, 184, 184);
+            width: 50vw;
+            padding-left: 10px;
+          }
+
+          #dt {
+            background-color: rgb(212, 212, 212);
+            width: 23vw;
+          }
+
+          #pp {
+            text-align: end;
+            padding-right: 5px;
+            background-color: rgb(247, 255, 130);
+            width: 10vw;
+          }
+
+          #bp {
+            text-align: end;
+            padding-right: 5px;
+            background-color: rgb(161, 255, 177);
+            width: 10vw;
+          }
+
+          .service {
+            padding-top: 5px;
+            padding-bottom: 2px;
+            margin-top: 0px;
+            line-height: 20px;
+            border-left: 1.5px solid rgb(98, 98, 98);
+            border-bottom: 1.5px solid rgb(98, 98, 98);
+          }
+        }
+      }
+    }
+  }
+}
+
+.toggleBox {
+  display: none;
+}
