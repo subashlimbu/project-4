@@ -2,12 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import auth from '../lib/auth'
 import { withRouter } from 'react-router-dom'
-<<<<<<< HEAD
-// import { GiHotMeal } from 'react-icons/gi'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLaptopMedical } from '@fortawesome/free-solid-svg-icons'
-=======
->>>>>>> development
 
 class NavBar extends React.Component {
   constructor() {
@@ -29,22 +23,6 @@ class NavBar extends React.Component {
   // }
 
   render() {
-<<<<<<< HEAD
-    // const isLoggedIn = auth.isLoggedIn()
-    return <>
-      <nav className="navbar is-black">
-        <div className="container navbar-container">
-          <div className="navbar-brand">
-            <Link className="navbar-item navtitle" to="/">
-              <FontAwesomeIcon icon={faLaptopMedical} size='3x'/> 
-            </Link>
-            <a
-              role="button"
-              className={`navbar-burger burger ${this.state.navMobileOpen ? 'is-active' : ''}`}
-              aria-label="menu"
-              aria-expanded="false"
-              onClick={() => this.setState({ navMobileOpen: !this.state.navMobileOpen })}
-=======
     const isLoggedIn = auth.isLoggedIn()
     return (
       <>
@@ -75,7 +53,6 @@ class NavBar extends React.Component {
               className={`navbar-menu ${
                 this.state.navMobileOpen ? 'is-active' : ''
               }`}
->>>>>>> development
             >
               <div className="navbar-end">
                 <div className="navbar-item">

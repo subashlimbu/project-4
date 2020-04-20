@@ -11,17 +11,18 @@ const handleChange = () => {
   element.classList.add('toggleBox')
 }
 
-const ServiceCard = ({ services }) => {
+const ServiceCard = ({ category, services }) => {
   return (
     <section>
-      <button onClick={handleChange}>Hide</button>
-      <button onClick={handleRemove}>Show</button>
+      {/* <button onClick={handleChange}>Hide</button>
+      <button onClick={handleRemove}>Show</button> */}
 
       <div
         className="column is-one-third-tablet is-half-mobile categoryAndService"
         id="toggle"
       >
         <div className="card serviceWrap">
+          <div className="categoryTitle">{category} </div>
           <div className="serviceHeader">
             <h1 id="hsn" className="headerBorder">
               Service
