@@ -52,7 +52,7 @@ class Service(models.Model):
 
 
 class Appointment(models.Model):
-    appointment_date = models.DateTimeField()
+    appointment_date = models.CharField(max_length=50)
     services = models.ManyToManyField(
         Service, related_name="appointments", blank=False)
     user = models.ForeignKey(
