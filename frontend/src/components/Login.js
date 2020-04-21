@@ -27,6 +27,7 @@ class Login extends React.Component {
       this.state.data)
       .then(res => {
         const token = res.data.token 
+        // console.log(token)
         auth.setToken(token)
         this.props.history.push('/services')
       })

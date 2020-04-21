@@ -1,21 +1,36 @@
 from rest_framework.views import APIView # get the APIView class from DRF
 from rest_framework.response import Response # get the Response class from DRF
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-
-from .models import Appointment, Service, Category, User
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.status import HTTP_201_CREATED, HTTP_422_UNPROCESSABLE_ENTITY, HTTP_204_NO_CONTENT, HTTP_401_UNAUTHORIZED
+from django.contrib.auth import get_user_model
+User = get_user_model()
+from .models import Appointment, Service, Category
 from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer, PopulateServiceSerializer, CategorySerializer, UserSerializer, PopulateCategorySerializer
 
 # Create your views here.
 # Appointments
-class ListView(ListCreateAPIView): # extend the APIView
-    queryset = Appointment.objects.all()
-    serializer_class = AppointmentSerializer
+class ListView(APIView): # extend the APIView
+    # queryset = Appointment.objects.all()
+    # serializer_class = AppointmentSerializer
+    # permission_classes = (IsAuthenticated, )
 
     def get(self, _request):
         appointment = Appointment.objects.all()
         serializer = PopulateAppointmentSerializer(appointment, many=True)
 
         return Response(serializer.data) # send the JSON to the client
+
+    
+
+    def post(self, request):
+        request.data['user'] = request.user.id
+        appointment = AppointmentSerializer(data=request.data)
+        if appointment.is_valid():
+            appointment.save()
+            return Response(appointment.data, status=HTTP_201_CREATED)
+        return Response(appointment.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+
 
 
 class DetailView(RetrieveUpdateDestroyAPIView): # extend the APIView

@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 from .serializers import UserSerializer
-
+User = get_user_model()
 class RegisterView(CreateAPIView):
     serializer_class = UserSerializer
     
@@ -19,7 +19,7 @@ class RegisterView(CreateAPIView):
 
         return Response(serializer.errors, status=422)
 
-User = get_user_model()
+
 class LoginView(APIView):
 
     def get_user(self, email):

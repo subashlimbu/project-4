@@ -37,23 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jwt_auth',
     'rest_framework',
+    'jwt_auth',
     'frontend',
     'appointments',
-    'mail',
+    'mail'
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'jwt_auth.authentication.JWTAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-    ],
-}
+AUTH_USER_MODEL = 'jwt_auth.User'
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -117,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'jwt_auth.User'
+
 
 
 # Internationalization
@@ -150,3 +143,14 @@ EMAIL_HOST_USER = 'medbooking@btinternet.com'
 EMAIL_HOST_PASSWORD = 'project-4'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'jwt_auth.authentication.JWTAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+}
