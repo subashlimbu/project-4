@@ -1,22 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 
-const handleRemove = () => {
-  const element = document.getElementById('toggle')
-  element.classList.remove('toggleBox')
-  console.log('bus')
-}
-
-const handleChange = () => {
-  const element = document.getElementById('toggle')
-  element.classList.add('toggleBox')
-}
+let choices = []
 
 const ServiceCard = ({ category, services }) => {
+  const [data, setChoices] = useState([])
+  // const [newChoices, setNewChoices] = useState([])
+
+  const handleChange = (event) => {
+    if (event.target.checked === true) {
+      choices.push(event.target.value)
+      setChoices([choices])
+    } else {
+      const newchoices = choices.filter((choice) => {
+        return choice !== event.target.value
+      })
+      choices = newchoices
+    }
+    console.log('choices: ' + choices)
+  }
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   axios.post('/api/appointments', { categories: this.state.categories }, { headers: { Authorization: `Bearer ${auth.getToken()}` } })
+  //     .catch(err => this.setState({ errors: err.response.data.errors }))
+  // }
+
   return (
     <section>
-      {/* <button onClick={handleChange}>Hide</button>
-      <button onClick={handleRemove}>Show</button> */}
-
       <div
         className="column is-one-third-tablet is-half-mobile categoryAndService"
         id="toggle"
@@ -52,7 +63,12 @@ const ServiceCard = ({ category, services }) => {
                     <p id="bp" className="service">
                       £ {service.business_price}
                     </p>
-                    <button></button>
+                    {/* <input type="checkbox" name={service.service_name} id="x" /> */}
+                    <input
+                      onChange={(event) => handleChange(event)}
+                      type="checkbox"
+                      value={service.service_name}
+                    />
                   </div>
                 )
               })}

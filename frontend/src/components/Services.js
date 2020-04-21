@@ -9,8 +9,7 @@ class Services extends React.Component {
     super(props)
     this.state = {
       categories: [],
-      services: [],
-      filteredServices: null,
+      filteredCategories: [],
       dropDownOption: ''
     }
   }
@@ -20,8 +19,7 @@ class Services extends React.Component {
       .then((res) =>
         this.setState({
           categories: res.data,
-          services: res.data,
-          filteredServices: res.data
+          filteredCategories: res.data
         })
       )
       .catch((error) => console.error(error))
@@ -34,23 +32,32 @@ class Services extends React.Component {
       const onlyDropdownSelected = this.state.categories.filter((category) => {
         return category.includes(event.target.value)
       })
-      this.setState({ filteredServices: onlyDropdownSelected })
+      this.setState({ filteredCategories: onlyDropdownSelected })
     }
   }
 
   render() {
     const category = this.state.categories
-    console.log(category)
+    const filtered = this.state.filteredCategories
+    console.log('filter' + filtered)
+    // console.log(category)
 
     return (
       <>
         <div className="servicePage">
           <div className="serviceFlex">
             <div className="dropdownDiv">
-              <Dropbox handleDropdown={() => this.handleDropdown(event)} />
-              {/* {this.state.filteredServices.map((categories) => {
-                console.log(categories.service_name)
-              })} */}
+              {filtered.map((cat, i) => {
+                return (
+                  <div key={i}>
+                    <Dropbox
+                      {...cat}
+                      handleDropdown={() => this.handleDropdown(event)}
+                    />
+                    console.log(cat)
+                  </div>
+                )
+              })}
             </div>
             {category.map((categories, i) => {
               return (
