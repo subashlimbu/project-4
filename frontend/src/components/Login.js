@@ -21,28 +21,35 @@ class Login extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    axios.post('/api/login',
-      this.state.data)
-      .then(res => {
-        const token = res.data.token 
-        // console.log(token)
-        auth.setToken(token)
-        this.props.history.push('/services')
-      })
+    axios.post('/api/login', this.state.data).then((res) => {
+      const token = res.data.token
+      // console.log(token)
+      auth.setToken(token)
+      this.props.history.push('/services')
+    })
   }
 
-  render(){
-    return <div>
-      <h1>Login</h1>
-      <form onSubmit={(event) => this.handleSubmit(event)}>
-        <label>Email</label>
-        <input onChange={(event)=> this.handleChange(event)} type='text' name='email'/>
-        <label>Password</label>
-        <input onChange={(event)=> this.handleChange(event)} type='password' name='password'/>
-        <button>Login</button>
-      </form>
-    </div>
+  render() {
+    return (
+      <div>
+        <h1>Login</h1>
+        <form onSubmit={(event) => this.handleSubmit(event)}>
+          <label>Email</label>
+          <input
+            onChange={(event) => this.handleChange(event)}
+            type="text"
+            name="email"
+          />
+          <label>Password</label>
+          <input
+            onChange={(event) => this.handleChange(event)}
+            type="password"
+            name="password"
+          />
+          <button>Login</button>
+        </form>
+      </div>
+    )
   }
 }
 export default Login
-

@@ -80,3 +80,5 @@ const ServiceCard = ({ category, services }) => {
 }
 
 export default ServiceCard
+
+// loop over check boxes

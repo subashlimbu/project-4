@@ -43,6 +43,8 @@ class Services extends React.Component {
     }
   }
   render() {
+    console.log(this.state.category)
+
     if (!this.state.filteredCategories) return <p> Waiting</p>
 
     return (
@@ -53,7 +55,7 @@ class Services extends React.Component {
 
             <div className="columns is-full-mobile is-multiline is-centered mobile-padding">
               {this.state.filteredCategories.map((services, index) => {
-                console.log(this.state.filteredCategories)
+                // console.log(this.state.filteredCategories)
                 return (
                   <div key={index} className="correct">
                     <ServiceCard {...services} />

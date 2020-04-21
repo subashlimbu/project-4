@@ -11,6 +11,7 @@ import Register from './components/Register'
 import Profile from './components/Profile'
 import Services from './components/Services'
 import Booking from './components/Booking'
+import Footer from './components/Footer'
 
 const App = () => (
   <HashRouter>
@@ -23,6 +24,7 @@ const App = () => (
       <Route path="/services" component={Services} />
       <Route path="/bookings" component={Booking} />
     </Switch>
+    <Footer />
   </HashRouter>
 )
 
