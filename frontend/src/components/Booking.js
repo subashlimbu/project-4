@@ -26,24 +26,21 @@ const Booking = () => {
         <h1>Appointment Date: {element.appointment_date}</h1>
         <div>
           Services:{element.services.map((elem, index) =>{
-            // console.log(elem)
-            const value = elem.private_price
-            // console.log(value)
-
+            console.log(elem)
             return <div key={index}>
               <h1>{elem.service_name}</h1>
               <h1>{elem.private_price}</h1>
-              {/* <div>{Object.values(value).reduce((acc, total) => {
-                return acc + total
-              },0)  }</div> */}
-              <div>{ Object.values(value).reduce((acc, total) => {
-                return acc += total
-              },0)  }</div>
+              
+    
             </div>
           })}
+          
         </div>
         <div>
           To Pay
+          <div>{ element.services.reduce((acc, elem) => {
+            return acc + parseFloat(elem.private_price)
+          },0)}</div>
         </div>
       </div>
 

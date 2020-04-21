@@ -26,3 +26,4 @@ class JWTAuthentication(BasicAuthentication):
             raise PermissionDenied({'message': 'No such subject'})
 
         return (user, token)
+    
