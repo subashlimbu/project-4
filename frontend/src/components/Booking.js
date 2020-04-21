@@ -7,13 +7,14 @@ class Booking extends React.Component {
   constructor() {
     super()
     this.state = {
-      appointments: [],
-      appointment_date: ''
+      appointments: []
+      
     }
   }
 
   componentDidMount(){
-    console.log(this.props.location)
+    // console.log(this.props.location)
+    
     // axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
     //   .then(res => this.setState({ appointments: res.data }))
     this.setState({ appointments: this.props.location.state })   
@@ -37,31 +38,37 @@ class Booking extends React.Component {
   // console.log(this.state.appointments)
 
   render(){
-    // console.log(this.state.appointments.slice(-1)[0])
-    if (this.state.appointments.length === 0 ) {
-      return null
-    }
-    const lastElement = this.state.appointments.slice(-1)[0]
-    // console.log(lastElement.services)
+    const amazing = this.state.appointments
+    
+    console.log(Object.values(typeof(amazing)))
+    return <div>{amazing}</div>
 
-    return <div> 
-      <h1>Appointment date: {lastElement.appointment_date}</h1> 
-      <div>Services:{lastElement.services.map((elem, index) =>{
-        return   <div key={index}>{elem.service_name} {elem.private_price}</div> 
-      })}</div>
-      <div> 
-        To Pay:
-        <div>{lastElement.services.reduce((acc, element ) =>{
-          return  acc + parseFloat(element.private_price)
-        }, 0)}</div> 
+    
+    // // console.log(this.state.appointments.slice(-1)[0])
+    // if (this.state.appointments.length === 0 ) {
+    //   return null
+    // }
+    // const lastElement = this.state.appointments.slice(-1)[0]
+    // // console.log(lastElement.services)
+
+    // return <div> 
+    //   <h1>Appointment date: {lastElement.appointment_date}</h1> 
+    //   <div>Services:{lastElement.services.map((elem, index) =>{
+    //     return   <div key={index}>{elem.service_name} {elem.private_price}</div> 
+    //   })}</div>
+    //   <div> 
+    //     To Pay:
+    //     <div>{lastElement.services.reduce((acc, element ) =>{
+    //       return  acc + parseFloat(element.private_price)
+    //     }, 0)}</div> 
         
-      </div>  
+    //   </div>  
 
-      <form onSubmit={(event) => this.handleSubmit(event)}>
-        <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
-        <input type="submit"/>
-      </form>
-    </div> 
+    //   <form onSubmit={(event) => this.handleSubmit(event)}>
+    //     <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
+    //     <input type="submit"/>
+    //   </form>
+    // </div> 
        
 
     
