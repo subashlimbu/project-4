@@ -5,7 +5,6 @@ let choices = []
 
 const ServiceCard = ({ category, services }) => {
   const [data, setChoices] = useState([])
-  // const [newChoices, setNewChoices] = useState([])
 
   const handleChange = (event) => {
     if (event.target.checked === true) {
