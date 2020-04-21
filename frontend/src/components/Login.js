@@ -3,7 +3,6 @@ import axios from 'axios'
 import auth from '../lib/auth'
 
 class Login extends React.Component {
-
   constructor() {
     super()
     this.state = {
@@ -13,7 +12,6 @@ class Login extends React.Component {
       }
     }
   }
-
 
   handleChange(event) {
     const { name, value } = event.target
@@ -46,5 +44,5 @@ class Login extends React.Component {
     </div>
   }
 }
-
 export default Login
+

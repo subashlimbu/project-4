@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 // import axios from 'axios'
-import { withRouter } from 'react-router-dom'
+// import { withRouter } from 'react-router-dom'
 // import { Spring } from 'react-spring/renderprops'
 // import { Parallax } from 'react-parallax'
 // import NavBar from './NavBar'

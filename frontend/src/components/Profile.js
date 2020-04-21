@@ -32,6 +32,21 @@ const Profile = () => {
               <img src={profile.user.image} alt="profile picture" />
             </figure>
           </div>
+
+          <div id="file-button-center" className="file is-light is-danger">
+            <label className="file-label">
+              <input className="file-input" type="file" name="resume" />
+              <span className="file-cta">
+                <span className="file-icon">
+                  <i className="fas fa-upload"></i>
+                </span>
+                <span className="file-label">
+                  Edit Picture
+                </span>
+              </span>
+            </label>
+          </div>
+
           <div className="card-content has-text-centered">
             <h1>First Name: {profile.user.first_name}</h1>
             <h1>Last Name: {profile.user.last_name}</h1>
@@ -41,6 +56,20 @@ const Profile = () => {
             <h1>Phone Number: {profile.user.phone_number}</h1>
             <h1>Client Type: {profile.user.user_type}</h1>
           </div>
+
+          <div className="field is-grouped">
+            <p className="control">
+              <button className="button is-success">
+                Save changes
+              </button>
+            </p>
+            <p className="control">
+              <button className="button is-danger">
+                Cancel
+              </button>
+            </p>
+          </div>
+
         </div>
       </div>
     })}
