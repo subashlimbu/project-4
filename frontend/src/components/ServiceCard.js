@@ -1,29 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-let choices = []
-
-const ServiceCard = ({ category, services }) => {
-  const [data, setChoices] = useState([])
-
-  const handleChange = (event) => {
-    if (event.target.checked === true) {
-      choices.push(event.target.value)
-      setChoices([choices])
-    } else {
-      const newchoices = choices.filter((choice) => {
-        return choice !== event.target.value
-      })
-      choices = newchoices
-    }
-    console.log('choices: ' + choices)
-  }
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   axios.post('/api/appointments', { categories: this.state.categories }, { headers: { Authorization: `Bearer ${auth.getToken()}` } })
-  //     .catch(err => this.setState({ errors: err.response.data.errors }))
-  // }
+const ServiceCard = ({ category, services, handleChange }) => {
 
   return (
     <section>
@@ -64,7 +42,7 @@ const ServiceCard = ({ category, services }) => {
                     </p>
                     {/* <input type="checkbox" name={service.service_name} id="x" /> */}
                     <input
-                      onChange={(event) => handleChange(event)}
+                      onChange={handleChange}
                       type="checkbox"
                       value={service.service_name}
                     />
