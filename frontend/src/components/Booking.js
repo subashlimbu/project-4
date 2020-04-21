@@ -11,11 +11,12 @@ class Booking extends React.Component {
       appointment_date: ''
     }
   }
+
   componentDidMount(){
-    
-    axios.get(('/api/appointments/'), { headers: { Authorization: `Bearer ${auth.getToken()}` } })
-      .then(res => this.setState({ appointments: res.data }))
-    
+    console.log(this.props.location)
+    // axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
+    //   .then(res => this.setState({ appointments: res.data }))
+    this.setState({ appointments: this.props.location.state })   
   }
 
   handleChange(event){

@@ -2,7 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import ServiceCard from './ServiceCard'
 import Dropbox from './Dropbox'
-// import { Link } from 'react-router-dom'
+import auth from '../lib/auth'
+import { Link } from 'react-router-dom'
 
 class Services extends React.Component {
   constructor(props) {
@@ -10,18 +11,20 @@ class Services extends React.Component {
     this.state = {
       category: [],
       filteredCategories: null,
-      dropDownOption: ''
+      dropDownOption: '',
+      choices: []
     }
   }
+
   componentDidMount() {
     axios
-      .get('/api/appointments/category/')
-      .then((res) =>
+      .get(('/api/appointments/category/'), { headers: { Authorization: `Bearer ${auth.getToken()}` } })
+      .then((res) => {
         this.setState({
           category: res.data,
           filteredCategories: res.data
         })
-      )
+      })
       .catch((error) => console.error(error))
   }
 
@@ -42,7 +45,24 @@ class Services extends React.Component {
       this.setState({ filteredCategories: onlyDropdownSelected })
     }
   }
+
+  handleChange(event) {
+    const choices = this.state.choices
+    if (event.target.checked === true) {
+      choices.push(event.target.value)
+      this.setState({ choices })
+    } else {
+      const newchoices = choices.filter(choice => {
+        return choice !== event.target.value
+      })
+      this.setState({ choices: newchoices })
+    }
+    console.log('choices: ' + choices)
+  }
+
   render() {
+    console.log(this.state.category)
+
     if (!this.state.filteredCategories) return <p> Waiting</p>
 
     return (
@@ -50,13 +70,16 @@ class Services extends React.Component {
         <div className="serviceFlex">
           <div className="serviceWrap">
             <Dropbox handleDropDown={() => this.handleDropdown(event)} />
-
+            <Link to={{
+              pathname: '/bookings',
+              state: this.state.choices
+            }}>Click Me</Link>
             <div className="columns is-full-mobile is-multiline is-centered mobile-padding">
               {this.state.filteredCategories.map((services, index) => {
-                console.log(this.state.filteredCategories)
+                // console.log(this.state.filteredCategories)
                 return (
                   <div key={index} className="correct">
-                    <ServiceCard {...services} />
+                    <ServiceCard handleChange = {(event) => this.handleChange(event)} {...services} />
                   </div>
                 )
               })}

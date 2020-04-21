@@ -8,14 +8,9 @@ const Profile = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    axios.get('/api/appointments/')
+    axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
       .then((resp) => {
         setData(resp.data)
-
-          .then(res => {
-            const token = res.data.token
-            auth.setToken(token)
-          })
 
       })
   }, [])
