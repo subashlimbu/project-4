@@ -23,7 +23,7 @@ class Login extends React.Component {
     event.preventDefault()
     axios.post('/api/login', this.state.data).then((res) => {
       const token = res.data.token
-      // console.log(token)
+      console.log(token)
       auth.setToken(token)
       this.props.history.push('/services')
     })

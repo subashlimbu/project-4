@@ -13,7 +13,7 @@ from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, S
 class ListView(APIView): # extend the APIView
     # queryset = Appointment.objects.all()
     # serializer_class = AppointmentSerializer
-    # permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
     def get(self, _request):
         appointment = Appointment.objects.all()
