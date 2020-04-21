@@ -8,7 +8,10 @@ from django.conf import settings
 import jwt
 from .serializers import UserSerializer
 
+from rest_framework.permissions import IsAuthenticated
+
 User = get_user_model()
+
 class RegisterView(CreateAPIView):
     serializer_class = UserSerializer
     
@@ -39,3 +42,14 @@ class LoginView(APIView):
 
         token = jwt.encode({'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
         return Response({'token': token, 'message': f'Welcome back {user.username}!'})
+
+
+# Profile view
+class ProfileView(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def get(self, request):
+        user = User.objects.get(pk=request.user.id)
+        serialized_user = PopulatedUserSerializer(user)
+        return Response(serialized_user.data)

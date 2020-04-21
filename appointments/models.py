@@ -45,16 +45,20 @@ class Service(models.Model):
     )
     private_price = models.DecimalField(max_digits=4, decimal_places=2)
     business_price = models.DecimalField(max_digits=4, decimal_places=2)
-    category = models.ForeignKey(Category, related_name='services', on_delete=models.CASCADE)
+    category = models.ForeignKey(
+        Category, related_name='services', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.service_name
 
 
 class Appointment(models.Model):
+  # date needs to be optional
     appointment_date = models.DateTimeField()
+# got this one
     services = models.ManyToManyField(
         Service, related_name="appointments", blank=False)
+# need user id
     user = models.ForeignKey(
         User, related_name='appointments', on_delete=models.CASCADE)
 

@@ -1,37 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 
-// const handleRemove = () => {
-//   const element = document.getElementById('toggle')
-//   element.classList.remove('toggleBox')
-//   console.log('bus')
-// }
+const ServiceCard = ({ category, services, handleChange }) => {
 
-// const handleChange = () => {
-//   const element = document.getElementById('toggle')
-//   element.classList.add('toggleBox')
-// }
-
-// handleChange(event) {
-//   console.log(event.target.checked)
-//   choices = this.state.categories
-//   if (event.target.checked === true) {
-//     choices.push(event.target.value)
-//   } else {
-//     const newchoices = choices.filter(choice => {
-//       return choice !== event.target.value
-//     })
-//     choices = newchoices
-//   }
-//   this.setState({ categories: choices })
-//   console.log(choices)
-// }
-
-const ServiceCard = ({ category, services }) => {
   return (
     <section>
-      {/* <button onClick={handleChange}>Hide</button>
-      <button onClick={handleRemove}>Show</button> */}
-
       <div
         className="column is-one-third-tablet is-half-mobile categoryAndService"
         id="toggle"
@@ -67,16 +40,12 @@ const ServiceCard = ({ category, services }) => {
                     <p id="bp" className="service">
                       £ {service.business_price}
                     </p>
-                    <button></button>
-                    {/* <label className="checkbox">
-                      <input
-                        onChange={(event) => this.handleChange(event)}
-                        type="checkbox"
-                        value={service.service_name}
-                        checked={this.state.categories.includes('service_name') ? true : false}
-                      />
-                          Business
-                    </label> */}
+                    {/* <input type="checkbox" name={service.service_name} id="x" /> */}
+                    <input
+                      onChange={handleChange}
+                      type="checkbox"
+                      value={service.service_name}
+                    />
                   </div>
                 )
               })}
@@ -89,3 +58,5 @@ const ServiceCard = ({ category, services }) => {
 }
 
 export default ServiceCard
+
+// loop over check boxes
