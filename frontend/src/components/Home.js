@@ -8,7 +8,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <section className="Hero hero is-primary">
+    <section className="Hero hero is-fullheight">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title is-1 has-text-warning has-text-centered">

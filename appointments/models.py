@@ -53,9 +53,7 @@ class Service(models.Model):
 
 
 class Appointment(models.Model):
-  # date needs to be optional
-    appointment_date = models.DateTimeField()
-# got this one
+    appointment_date = models.CharField(max_length=50)
     services = models.ManyToManyField(
         Service, related_name="appointments", blank=False)
 # need user id

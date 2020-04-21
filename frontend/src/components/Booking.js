@@ -7,20 +7,21 @@ class Booking extends React.Component {
   constructor() {
     super()
     this.state = {
-      appointments: [],
-      appointment_date: ''
+      appointments: []
+      
     }
   }
 
   componentDidMount(){
-    console.log(this.props.location)
+    // console.log(this.props.location)
+    
     // axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
     //   .then(res => this.setState({ appointments: res.data }))
     this.setState({ appointments: this.props.location.state })   
   }
 
   handleChange(event){
-    console.log(event.target)
+    // console.log(event.target)
     const { name, value } = event.target
     const data = { ...this.state.appointments.appointment_date, [name]: value }
     this.setState({ data })
@@ -37,45 +38,41 @@ class Booking extends React.Component {
   // console.log(this.state.appointments)
 
   render(){
-    console.log(this.state.appointments)
-
-    return <div> {this.state.appointments.map((element, i) =>{
-
-      // console.log(element.services)
-      
-      return <div key={i}>
-        <h1>Appointment Date: {element.appointment_date}</h1>
-        <div>
-          Services:{element.services.map((elem, index) =>{
-            // console.log(elem)
-            return <div key={index}>
-              <h1>{elem.service_name}</h1>
-              <h1>{elem.private_price}</h1>
-              
+    const amazing = this.state.appointments
     
-            </div>
-          })}
-          
-        </div>
-        <div>
-          To Pay
-          <div>{ element.services.reduce((acc, elem) => {
-            return acc + parseFloat(elem.private_price)
-          },0)}</div>
-        </div>
-        
-        <form onSubmit={(event) => this.handleSubmit(event)}>
-          <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
-          <input type="submit"/>
-        </form>
-      </div>
+    console.log(Object.values(typeof(amazing)))
+    return <div>{amazing}</div>
 
-    } )}
-    <div>
-      
-    </div>
-    </div>
-  
+    
+    // // console.log(this.state.appointments.slice(-1)[0])
+    // if (this.state.appointments.length === 0 ) {
+    //   return null
+    // }
+    // const lastElement = this.state.appointments.slice(-1)[0]
+    // // console.log(lastElement.services)
+
+    // return <div> 
+    //   <h1>Appointment date: {lastElement.appointment_date}</h1> 
+    //   <div>Services:{lastElement.services.map((elem, index) =>{
+    //     return   <div key={index}>{elem.service_name} {elem.private_price}</div> 
+    //   })}</div>
+    //   <div> 
+    //     To Pay:
+    //     <div>{lastElement.services.reduce((acc, element ) =>{
+    //       return  acc + parseFloat(element.private_price)
+    //     }, 0)}</div> 
+        
+    //   </div>  
+
+    //   <form onSubmit={(event) => this.handleSubmit(event)}>
+    //     <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
+    //     <input type="submit"/>
+    //   </form>
+    // </div> 
+       
+
+    
+     
   
   }
 
