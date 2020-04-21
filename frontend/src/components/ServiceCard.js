@@ -1,15 +1,30 @@
 import React from 'react'
 
-const handleRemove = () => {
-  const element = document.getElementById('toggle')
-  element.classList.remove('toggleBox')
-  console.log('bus')
-}
+// const handleRemove = () => {
+//   const element = document.getElementById('toggle')
+//   element.classList.remove('toggleBox')
+//   console.log('bus')
+// }
 
-const handleChange = () => {
-  const element = document.getElementById('toggle')
-  element.classList.add('toggleBox')
-}
+// const handleChange = () => {
+//   const element = document.getElementById('toggle')
+//   element.classList.add('toggleBox')
+// }
+
+// handleChange(event) {
+//   console.log(event.target.checked)
+//   choices = this.state.categories
+//   if (event.target.checked === true) {
+//     choices.push(event.target.value)
+//   } else {
+//     const newchoices = choices.filter(choice => {
+//       return choice !== event.target.value
+//     })
+//     choices = newchoices
+//   }
+//   this.setState({ categories: choices })
+//   console.log(choices)
+// }
 
 const ServiceCard = ({ category, services }) => {
   return (
@@ -53,6 +68,15 @@ const ServiceCard = ({ category, services }) => {
                       £ {service.business_price}
                     </p>
                     <button></button>
+                    {/* <label className="checkbox">
+                      <input
+                        onChange={(event) => this.handleChange(event)}
+                        type="checkbox"
+                        value={service.service_name}
+                        checked={this.state.categories.includes('service_name') ? true : false}
+                      />
+                          Business
+                    </label> */}
                   </div>
                 )
               })}
