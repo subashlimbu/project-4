@@ -162,24 +162,28 @@ div.hero-body {
 .footer {
   position: relative;
   padding: 1rem 1.5rem 2rem;
-  background-color: rgba(0, 0, 0, 0.363);
+  background: linear-gradient(white, rgb(190, 190, 190), black);
   .textFooter {
-    font-size: 25px;
-    color: rgb(0, 0, 0);
+    h2 {
+      font-size: 25px;
+      font-weight: 600;
+      color: rgb(0, 0, 0);
+    }
   }
   .flexFoot {
     display: flex;
     justify-content: center;
     font-size: 15px;
+    color: black;
     .footerGroup1 {
       margin-left: 1.2rem;
       margin-right: 1.2rem;
       font-size: xx-large;
 
       a {
-        font-size: 30px;
+        font-size: 33px;
         text-decoration: none;
-        color: rgb(255, 86, 56);
+        color: rgb(59, 161, 0);
       }
       .footerItem {
         margin-left: 1.2rem;
@@ -189,8 +193,10 @@ div.hero-body {
     .footerGroup2 {
       margin-left: 1.2rem;
       margin-right: 1.2rem;
+      font-size: xx-large;
+
       a {
-        font-size: 30px;
+        font-size: 33px;
         text-decoration: none;
         color: rgb(60, 112, 255);
       }
@@ -202,8 +208,9 @@ div.hero-body {
     .footerGroup3 {
       margin-left: 1.2rem;
       margin-right: 1.2rem;
+      font-size: xx-large;
       a {
-        font-size: 30px;
+        font-size: 33px;
         text-decoration: none;
         color: rgb(197, 255, 37);
       }
@@ -215,8 +222,10 @@ div.hero-body {
     .footerGroup4 {
       margin-left: 1.2rem;
       margin-right: 1.2rem;
+      font-size: xx-large;
+
       a {
-        font-size: 30px;
+        font-size: 33px;
         text-decoration: none;
         color: rgb(213, 46, 255);
       }
