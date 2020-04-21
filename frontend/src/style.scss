@@ -7,6 +7,10 @@ body {
   margin: 0;
   justify-content: center;
 }
+
+// .hero-body {
+//   padding: 5px;
+// }
 #homeBtn {
   background-color: inherit;
   font-family: 'Ruslan Display', cursive;
@@ -38,9 +42,11 @@ body {
 div.hero-body {
   background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/healthcare-data-hed-796x417.png');
   background-size: cover;
-  height: 100vh;
+  
   justify-content: center;
 }
+
+ 
 
 .navbar-edited {
   color: rgb(255, 255, 255);
@@ -61,6 +67,15 @@ div.hero-body {
   position: fixed;
   width: 100vw;
 }
+
+.hero.is-success .title {
+  color: green;
+}
+
+.hero.is-success .subtitle {
+  color: green;
+}
+
 
 .title,
 .subtitle {
