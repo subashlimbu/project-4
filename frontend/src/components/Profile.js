@@ -8,11 +8,11 @@ const Profile = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
+    axios.get('/api/profile', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
       .then((resp) => {
         setData(resp.data)
-
       })
+      .catch( error => console.error(error))
   }, [])
 
   // console.log(data)

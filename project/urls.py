@@ -30,9 +30,11 @@ urlpatterns = [
     path('api/services/', include('appointments.urls')),
     path('api/category/', include('appointments.urls')),
     path('api/user/', include('appointments.urls')),
-    path('api/emails/', include('mail.urls')),
+    # path('api/emails/', include('mail.urls')),
+    path('emails/', include('mail.urls')),
     
     path('account/', include('django.contrib.auth.urls'))
-    # path('', include('mail.urls'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+   
 
