@@ -14,4 +14,24 @@ def index(request):
               fail_silently=False)
 
     return render(request, 'send/index.html')
-    # return render(request, '../frontend/src/components/Profile.js')
+
+# from django.core import mail
+
+# connection = mail.get_connection()
+
+# # Manually open the connection
+# connection.open()
+
+# # Construct an email message that uses the connection
+# send_mail = mail.EmailMessage(
+#     'Hello from L.A.B.S',
+#     'We are pleased to confirm that your booking with Labs is now complete.',
+#     'medbooking@btinternet.com',
+#     ['labs@2go-mail.com'],
+#     fail_silently=False,
+#     connection=connection,
+#     )
+# send_mail.send() # Send the email
+
+# # We need to manually close the connection.
+# connection.close()
