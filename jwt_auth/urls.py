@@ -6,6 +6,5 @@ from .views import RegisterView, LoginView # importing our views from JWT auth
 urlpatterns = [
     path('register', RegisterView.as_view()), # sending requests to  '/register' to the register view(controller)
     path('login', LoginView.as_view()), # and the same for login
-] 
-
-    
+    # path('profile', ProfileView.as_view())
+]

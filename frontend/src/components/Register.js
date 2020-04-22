@@ -36,8 +36,8 @@ class Register extends React.Component {
     axios.post('/api/register',
       this.state.data)
       .then(res => console.log('response', res))
-      .then(() => {
-        console.log('hi')
+      .then(res => {
+        // console.log('hi')
         // const token = res.data.token
         // auth.setToken(token)
         this.props.history.push('/login')
@@ -117,9 +117,9 @@ class Register extends React.Component {
                     className="input"
                   />
                 </div>
-                {/* {errors.first_name && <small className="help is-danger">
-                  {errors.first_name.message}
-                </small>} */}
+                {errors.first_name && <small className="help is-danger">
+                  {errors.first_name}
+                </small>}
               </div>
 
               <div className="field">
@@ -134,9 +134,9 @@ class Register extends React.Component {
                     className="input"
                   />
                 </div>
-                {/* {errors.last_name && <small className="help is-danger">
-                  {errors.last_name.message}
-                </small>} */}
+                {errors.last_name && <small className="help is-danger">
+                  {errors.last_name}
+                </small>}
               </div>
 
               <div className="field">
@@ -186,9 +186,9 @@ class Register extends React.Component {
                     className="input"
                   />
                 </div>
-                {/* {errors.password && <small className="help is-danger">
-                  {errors.password.message}
-                </small>} */}
+                {errors.password && <small className="help is-danger">
+                  {errors.password}
+                </small>}
               </div>
 
               <div className="field">
@@ -218,38 +218,6 @@ class Register extends React.Component {
       {/* </div>
       </div> */}
     </section>
-
-
-
-    // return <div>
-    //   <h2>Register</h2>
-    //   <form onSubmit={(event) => this.handleSubmit(event)}>
-    //     <label>Email</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="email" type="text"/>
-    //     <label>Username</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="username" type="text"/>
-    //     <label>First Name</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="first_name" type="text"/>
-    //     <label>Last Name</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="last_name" type="text"/>
-    //     <label>Age</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="age" type="number"/>
-    //     <label>Phone Number</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="phone_number" type="number"/>
-    //     <label>Password</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="password" type="password"/>
-    //     <label>Confirm Password</label>
-    //     <input 
-    //       onChange={(event) => this.handleChange(event)} type="password" name="password_confirmation"/>
-    //     {/* <label>User Type</label>
-    //     <select value={this.state.user_type} onChange={(event) => this.handleChange(event)} name="user_type">
-    //       <option value="Business">Business</option>
-    //       <option value="Individual">Individual</option>
-    //     </select> */}
-    //     <button>Register</button>
-    //   </form>
-    // </div>
-
 
   }
 }

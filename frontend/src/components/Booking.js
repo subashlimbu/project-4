@@ -7,88 +7,86 @@ class Booking extends React.Component {
   constructor() {
     super()
     this.state = {
-      appointments: [],
-      appointment_date: ''
+      data: {
+        appointment_date: '',
+        services: []
+
+      },
+      thiswontbeposted: []
+      
     }
   }
 
-  componentDidMount() {
-    console.log(this.props.location)
+  componentDidMount(){
+    // console.log(this.props.location)
+    const testArray = this.props.location.state.map((serviceObject)=>{
+      return JSON.parse(serviceObject)
+    }) 
     // axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
     //   .then(res => this.setState({ appointments: res.data }))
-    this.setState({ appointments: this.props.location.state })
+    
+    const servicesArray = []
+    testArray.forEach((e)=>{
+      servicesArray.push(e.id)
+    })
+    this.setState({ data: { services: servicesArray }  })
+    
+    this.setState({  thiswontbeposted: testArray  })   
   }
 
-  handleChange(event) {
-    console.log(event.target)
+  handleChange(event){
+    // console.log(event.target)
     const { name, value } = event.target
-    const data = { ...this.state.appointments.appointment_date, [name]: value }
+    const data = { ...this.state.data, [name]: value }
+    // console.log(data)
     this.setState({ data })
   }
-
-
-  handleSubmit(event) {
+  //1. Fileter trough this.state.data
+  
+  handleSubmit(event){
     event.preventDefault()
-    axios.post('/api/appointments/',
-      this.state.appointments[0].appointment_date)
+    
+    axios.post('/api/appointments/', this.state.data, { headers: { Authorization: `Bearer ${auth.getToken()}` } })
+      .then( console.log('POST IS DONE'))
+      .then( res => {
+        this.props.history.push('/profile')
+      })
+      .catch( error => console.error(error))
+      
+    // console.log(this.state.appointments)
   }
 
 
   // console.log(this.state.appointments)
+ 
+  render(){
+    //you can parse an array, u cna only parse... 
+    console.log(this.state.data)
+    const mappedAppointments = this.state.thiswontbeposted
 
-  render() {
-    if (!this.state.appointments) return <p>Waiting</p>
-    // const a = this.state.appointments
-    // console.log(a)
-
-    return (
-      <div className="title" onClick>
+    return <div>{mappedAppointments.map((elem,index) => {
+      return <div key={index}> <h1>{elem.service_name}</h1> 
         
-        {this.state.appointments.map((element, i) => {
-          return (
-            <div key={i}>{element.services_name}</div>
-            
-
-          // console.log(element.services_name)
-          )
-
-        })}
-
       </div>
-    )
-
-
-    // <h1>Appointment Date: {element.appointment_date}</h1>
-    // })}
-    // </div>
-    //   Services:{element.services.map((elem, index) => {
-    //   console.log(elem)
-    //   return <div key={index}>
-    //     <h1>{elem.service_name}</h1>
-    //     <h1>{elem.private_price}</h1>
-
-
-    //   </div>
-    // })}
-    // </div>
-    //       </div>
-    //       <div>
-    //         To Pay
-    //           <div>{element.services.reduce((acc, elem) => {
-    //         return acc + parseFloat(elem.private_price)
-    //       }, 0)}</div>
-    //       </div>
-
-    //       <form onSubmit={(event) => this.handleSubmit(event)}>
-    //         <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local" />
-    //         <input type="submit" />
-    //       </form>
-    //     </div>
-
-    // } )}
-
-
-
+      
+  
+      // console.log(elem.service_name)
+       
+    })}
+    
+    <div> 
+         To Pay:
+      <div>{mappedAppointments.reduce((acc, element ) =>{
+        return  acc + parseFloat(element.private_price)
+      }, 0)}</div> 
+        
+    </div>  
+    <form onSubmit={(event) => this.handleSubmit(event)}>
+      <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
+      <input type="submit"/>
+    </form>
+    
+    </div> 
   }
 }
 
