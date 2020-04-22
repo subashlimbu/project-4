@@ -8,6 +8,13 @@ body {
   justify-content: center;
 }
 
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
   align-items: center;
   padding: 5px 5px 5px 5px;

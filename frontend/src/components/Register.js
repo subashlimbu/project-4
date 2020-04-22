@@ -216,13 +216,7 @@ class Register extends React.Component {
       </div>
      
     </section>
-
-
-
-
   }
 }
-
-
 
 export default Register

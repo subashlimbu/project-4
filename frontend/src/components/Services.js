@@ -4,6 +4,7 @@ import ServiceCard from './ServiceCard'
 import Dropbox from './Dropbox'
 import auth from '../lib/auth'
 import { Link } from 'react-router-dom'
+import LoaderSpinner from './LoaderSpinner'
 
 class Services extends React.Component {
   constructor(props) {
@@ -68,7 +69,7 @@ class Services extends React.Component {
   render() {
     // console.log(this.state.category)
 
-    if (!this.state.filteredCategories) return <p> Waiting</p>
+    if (!this.state.filteredCategories) return <p> <LoaderSpinner /></p>
 
     return (
       <div className="servicePage">

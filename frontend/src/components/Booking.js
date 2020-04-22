@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import auth from '../lib/auth'
+import LoaderSpinner from './LoaderSpinner'
 
 
 class Booking extends React.Component {
@@ -63,6 +64,8 @@ class Booking extends React.Component {
     //you can't parse an array, you can only parse a string and so you will need 
     console.log(this.state.data)
     const mappedAppointments = this.state.thiswontbeposted
+
+    if (!mappedAppointments) return <p> <LoaderSpinner /></p>
 
     return <div>{mappedAppointments.map((elem,index) => {
       return <div key={index}> <h1>{elem.service_name}</h1> 
