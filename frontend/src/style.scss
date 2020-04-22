@@ -115,7 +115,17 @@ div.hero-body {
       width: 100vw;
       min-width: 500px;
       .serviceWrap {
-        background-color: rgba(114, 19, 182, 0.5);
+        background-color: rgba(114, 19, 182, 0.233);
+        input[type='checkbox'] {
+          /* Double-sized Checkboxes */
+          -ms-transform: scale(2.3); /* IE */
+          -moz-transform: scale(2.3); /* FF */
+          -webkit-transform: scale(2.3); /* Safari and Chrome */
+          -o-transform: scale(2.3); /* Opera */
+          transform: scale(2.3);
+          margin-top: 9.5px;
+          margin-left: 10px;
+        }
         .serviceHeader {
           display: flex;
           padding-top: 3px;
