@@ -2,12 +2,13 @@ from rest_framework import serializers
 from .models import Appointment, Category, Service
 from django.contrib.auth import get_user_model
 User = get_user_model()
+
 # from ..jwt_auth/models import User
 # jwt_auth/models.py
 
 
 class AppointmentSerializer(serializers.ModelSerializer):
-
+    
     class Meta:
         model = Appointment
         fields = ('id', 'appointment_date', 'services', 'user')
@@ -61,3 +62,4 @@ class PopulateAppointmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Appointment
         fields = ('id', 'appointment_date', 'user', 'services')
+

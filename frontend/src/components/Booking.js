@@ -38,7 +38,6 @@ class Booking extends React.Component {
     // console.log(data)
     this.setState({ data })
   }
-  //1. Fileter trough this.state.data
 
   handleSubmit(event) {
     event.preventDefault()
@@ -59,7 +58,7 @@ class Booking extends React.Component {
   // console.log(this.state.appointments)
 
   render() {
-    //you can parse an array, u cna only parse...
+    //you can't parse an array, you can only parse a string and so you will need
     console.log(this.state.data)
     const mappedAppointments = this.state.thiswontbeposted
 
