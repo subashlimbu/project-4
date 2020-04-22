@@ -87,12 +87,7 @@ class Booking extends React.Component {
     </form>
     
     </div> 
-
-
   }
-
-
-
 }
 
 export default Booking

@@ -31,7 +31,6 @@ class NavBar extends React.Component {
             <div className="navbar-brand">
               <Link id="homeBtn" className="navbar-item foodtitle" to="/">
                 L.A.B.S
-                {/* <FontAwesomeIcon icon={faUtensils} />  */}
               </Link>
               <a
                 role="button"

@@ -44,14 +44,15 @@ class Register extends React.Component {
       })
       // .then(() => this.props.history.push('/login'))
       .catch(error => {
+        
         this.setState({ errors: error.response.data })
+        console.log(error.response.data)
       })
   }
 
   render() {
 
     const { errors } = this.state
-    // console.log(errors)
 
     return <section className="hero">
       <div className="hero-body ">

@@ -44,7 +44,7 @@ class LoginView(APIView):
         return Response({'token': token, 'message': f'Welcome back {user.username}!'})
 
 
-# Profile view
+# Profile view - Not currently used
 class ProfileView(APIView):
 
     permission_classes = (IsAuthenticated, )
@@ -53,3 +53,6 @@ class ProfileView(APIView):
         user = User.objects.get(pk=request.user.id)
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data)
+    
+
+    

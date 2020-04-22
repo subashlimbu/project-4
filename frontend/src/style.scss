@@ -8,6 +8,23 @@ body {
   justify-content: center;
 }
 
+.card {
+  align-items: center;
+  padding: 5px 5px 5px 5px;
+  margin: 5px;
+}
+
+.button1 {
+  background-color: darkcyan;
+  font-size: 25px;
+  color: white;
+  padding: 10px 10px;
+  // margin: 0 auto;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%
+}
+
 // .hero-body {
 //   padding: 5px;
 // }

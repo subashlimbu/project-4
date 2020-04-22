@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+// import auth from '../lib/auth'
+
 
 const ServiceCard = ({ category, services, handleChange }) => {
 
   return (
+    
     <section>
       <div
         className="column is-one-third-tablet is-half-mobile categoryAndService"
@@ -60,6 +63,7 @@ const ServiceCard = ({ category, services, handleChange }) => {
     </section>
   )
 }
+
 
 export default ServiceCard
 
