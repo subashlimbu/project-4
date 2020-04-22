@@ -48,6 +48,9 @@ class Booking extends React.Component {
     
     axios.post('/api/appointments/', this.state.data, { headers: { Authorization: `Bearer ${auth.getToken()}` } })
       .then( console.log('POST IS DONE'))
+      .then( res => {
+        this.props.history.push('/profile')
+      })
       .catch( error => console.error(error))
       
     // console.log(this.state.appointments)
