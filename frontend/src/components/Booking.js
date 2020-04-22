@@ -7,73 +7,85 @@ class Booking extends React.Component {
   constructor() {
     super()
     this.state = {
-      appointments: []
+      data: {
+        appointment_date: '',
+        services: []
+
+      },
+      thiswontbeposted: []
       
     }
   }
 
   componentDidMount(){
     // console.log(this.props.location)
-    
+    const testArray = this.props.location.state.map((serviceObject)=>{
+      return JSON.parse(serviceObject)
+    }) 
     // axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
     //   .then(res => this.setState({ appointments: res.data }))
-    this.setState({ appointments: this.props.location.state })   
+    
+    const servicesArray = []
+    testArray.forEach((e)=>{
+      servicesArray.push(e.id)
+    })
+    this.setState({ data: { services: servicesArray }  })
+    
+    this.setState({  thiswontbeposted: testArray  })   
   }
 
   handleChange(event){
     // console.log(event.target)
     const { name, value } = event.target
-    const data = { ...this.state.appointments.appointment_date, [name]: value }
+    const data = { ...this.state.data, [name]: value }
+    // console.log(data)
     this.setState({ data })
   }
-  
+  //1. Fileter trough this.state.data
   
   handleSubmit(event){
     event.preventDefault()
-    axios.post('/api/appointments/',
-      this.state.appointments[0].appointment_date)
+    
+    axios.post('/api/appointments/', this.state.data, { headers: { Authorization: `Bearer ${auth.getToken()}` } })
+      .then( console.log('POST IS DONE'))
+      .catch( error => console.error(error))
+      
+    // console.log(this.state.appointments)
   }
 
 
   // console.log(this.state.appointments)
-
+ 
   render(){
-    const amazing = this.state.appointments
-    
-    console.log(Object.values(typeof(amazing)))
-    return <div>{amazing}</div>
+    //you can parse an array, u cna only parse... 
+    console.log(this.state.data)
+    const mappedAppointments = this.state.thiswontbeposted
 
-    
-    // // console.log(this.state.appointments.slice(-1)[0])
-    // if (this.state.appointments.length === 0 ) {
-    //   return null
-    // }
-    // const lastElement = this.state.appointments.slice(-1)[0]
-    // // console.log(lastElement.services)
-
-    // return <div> 
-    //   <h1>Appointment date: {lastElement.appointment_date}</h1> 
-    //   <div>Services:{lastElement.services.map((elem, index) =>{
-    //     return   <div key={index}>{elem.service_name} {elem.private_price}</div> 
-    //   })}</div>
-    //   <div> 
-    //     To Pay:
-    //     <div>{lastElement.services.reduce((acc, element ) =>{
-    //       return  acc + parseFloat(element.private_price)
-    //     }, 0)}</div> 
+    return <div>{mappedAppointments.map((elem,index) => {
+      return <div key={index}> <h1>{elem.service_name}</h1> 
         
-    //   </div>  
-
-    //   <form onSubmit={(event) => this.handleSubmit(event)}>
-    //     <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
-    //     <input type="submit"/>
-    //   </form>
-    // </div> 
-       
-
-    
-     
+      </div>
+      
   
+      // console.log(elem.service_name)
+       
+    })}
+    
+    <div> 
+         To Pay:
+      <div>{mappedAppointments.reduce((acc, element ) =>{
+        return  acc + parseFloat(element.private_price)
+      }, 0)}</div> 
+        
+    </div>  
+    <form onSubmit={(event) => this.handleSubmit(event)}>
+      <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
+      <input type="submit"/>
+    </form>
+    
+    </div> 
+
+
   }
 
 

@@ -45,6 +45,7 @@ const ServiceCard = ({ category, services, handleChange }) => {
                     <input
                       onChange={handleChange}
                       type="checkbox"
+                      // value={JSON.stringify(service)}
                       value={JSON.stringify(service)}
                       
                     />

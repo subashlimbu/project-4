@@ -48,7 +48,7 @@ class Services extends React.Component {
 
   handleChange(event) {
     const choices = this.state.choices
-    console.log(this.state.choices)
+    // console.log(this.state.choices)
     if (event.target.checked === true) {
       choices.push(event.target.value)
       this.setState({ choices })
