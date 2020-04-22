@@ -11,6 +11,7 @@ const Profile = () => {
     axios.get('/api/profile', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
       .then((resp) => {
         setData(resp.data)
+        console.log(data)
       })
       .catch( error => console.error(error))
   }, [])
