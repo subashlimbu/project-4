@@ -8,14 +8,17 @@ User = get_user_model()
 from .models import Appointment, Service, Category
 from .serializers import AppointmentSerializer, PopulateAppointmentSerializer, ServiceSerializer, PopulateServiceSerializer, CategorySerializer, UserSerializer, PopulateCategorySerializer
 
+from rest_framework import permissions
+from rest_framework.permissions import BasePermission
 # Create your views here.
 # Appointments
 class ListView(APIView): # extend the APIView
     # queryset = Appointment.objects.all()
     # serializer_class = AppointmentSerializer
     permission_classes = (IsAuthenticated, )
-
+    # def get(self, request, pk):
     def get(self, _request):
+        current_user = request.user.id
         appointment = Appointment.objects.all()
         serializer = PopulateAppointmentSerializer(appointment, many=True)
 
