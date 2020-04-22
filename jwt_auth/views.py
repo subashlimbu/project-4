@@ -44,7 +44,7 @@ class LoginView(APIView):
         return Response({'token': token, 'message': f'Welcome back {user.username}!'})
 
 
-# Profile view
+# Profile view - Not currently used
 class ProfileView(APIView):
 
     permission_classes = (IsAuthenticated, )
