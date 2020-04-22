@@ -97,3 +97,4 @@ class UserDetailView(RetrieveUpdateDestroyAPIView):
         serializer = UserSerializer(user)
 
         return Response(serializer.data)
+    

@@ -53,3 +53,6 @@ class ProfileView(APIView):
         user = User.objects.get(pk=request.user.id)
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data)
+    
+
+    

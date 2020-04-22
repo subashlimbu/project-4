@@ -36,22 +36,23 @@ class Register extends React.Component {
     axios.post('/api/register',
       this.state.data)
       .then(res => console.log('response', res))
-      .then(res => {
+      .then(() => {
         console.log('hi')
-        const token = res.data.token
-        auth.setToken(token)
+        // const token = res.data.token
+        // auth.setToken(token)
         this.props.history.push('/login')
       })
       // .then(() => this.props.history.push('/login'))
       .catch(error => {
+        
         this.setState({ errors: error.response.data })
+        console.log(error.response.data)
       })
   }
 
   render() {
 
     const { errors } = this.state
-    // console.log(errors)
 
     return <section className="hero">
       <div className="hero-body ">
@@ -83,7 +84,7 @@ class Register extends React.Component {
                   />
                 </div>
                 {errors.email && <small className="help is-danger">
-                  {errors.email.message}
+                  {errors.email}
                 </small>}
               </div>
 
@@ -100,7 +101,7 @@ class Register extends React.Component {
                   />
                 </div>
                 {errors.username && <small className="help is-danger">
-                  {errors.username.message}
+                  {errors.username}
                 </small>}
               </div>
 
@@ -116,9 +117,9 @@ class Register extends React.Component {
                     className="input"
                   />
                 </div>
-                {errors.first_name && <small className="help is-danger">
+                {/* {errors.first_name && <small className="help is-danger">
                   {errors.first_name.message}
-                </small>}
+                </small>} */}
               </div>
 
               <div className="field">
@@ -133,9 +134,9 @@ class Register extends React.Component {
                     className="input"
                   />
                 </div>
-                {errors.last_name && <small className="help is-danger">
+                {/* {errors.last_name && <small className="help is-danger">
                   {errors.last_name.message}
-                </small>}
+                </small>} */}
               </div>
 
               <div className="field">
@@ -151,7 +152,7 @@ class Register extends React.Component {
                   />
                 </div>
                 {errors.age && <small className="help is-danger">
-                  {errors.age.message}
+                  {errors.age}
                 </small>}
               </div>
 
@@ -168,7 +169,7 @@ class Register extends React.Component {
                   />
                 </div>
                 {errors.phone_number && <small className="help is-danger">
-                  {errors.phone_number.message}
+                  {errors.phone_number}
                 </small>}
               </div>
 
@@ -185,9 +186,9 @@ class Register extends React.Component {
                     className="input"
                   />
                 </div>
-                {errors.password && <small className="help is-danger">
+                {/* {errors.password && <small className="help is-danger">
                   {errors.password.message}
-                </small>}
+                </small>} */}
               </div>
 
               <div className="field">
@@ -203,7 +204,7 @@ class Register extends React.Component {
                   />
                 </div>
                 {errors.password_confirmation && <small className="help is-danger">
-                  {errors.password_confirmation.message}
+                  {errors.password_confirmation}
                 </small>}
               </div>
               <button className="button is-success is-large">

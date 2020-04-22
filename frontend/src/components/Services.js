@@ -50,6 +50,7 @@ class Services extends React.Component {
     const choices = this.state.choices
     if (event.target.checked === true) {
       choices.push(event.target.value)
+      console.log(choices)
       this.setState({ choices })
     } else {
       const newchoices = choices.filter(choice => {
@@ -61,7 +62,6 @@ class Services extends React.Component {
   }
 
   render() {
-    console.log(this.state.category)
 
     if (!this.state.filteredCategories) return <p> Waiting</p>
 
@@ -73,7 +73,8 @@ class Services extends React.Component {
             <Link to={{
               pathname: '/bookings',
               state: this.state.choices
-            }}>Click Me</Link>
+              
+            }}><button className="button1">Book Now</button></Link>
             <div className="columns is-full-mobile is-multiline is-centered mobile-padding">
               {this.state.filteredCategories.map((services, index) => {
                 // console.log(this.state.filteredCategories)

@@ -12,22 +12,22 @@ class Booking extends React.Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     console.log(this.props.location)
     // axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
     //   .then(res => this.setState({ appointments: res.data }))
-    this.setState({ appointments: this.props.location.state })   
+    this.setState({ appointments: this.props.location.state })
   }
 
-  handleChange(event){
+  handleChange(event) {
     console.log(event.target)
     const { name, value } = event.target
     const data = { ...this.state.appointments.appointment_date, [name]: value }
     this.setState({ data })
   }
-  
-  
-  handleSubmit(event){
+
+
+  handleSubmit(event) {
     event.preventDefault()
     axios.post('/api/appointments/',
       this.state.appointments[0].appointment_date)
@@ -36,51 +36,60 @@ class Booking extends React.Component {
 
   // console.log(this.state.appointments)
 
-  render(){
-    console.log(this.state.appointments)
+  render() {
+    if (!this.state.appointments) return <p>Waiting</p>
+    // const a = this.state.appointments
+    // console.log(a)
 
-    return <div> {this.state.appointments.map((element, i) =>{
-
-      // console.log(element.services)
-      
-      return <div key={i}>
-        <h1>Appointment Date: {element.appointment_date}</h1>
-        <div>
-          Services:{element.services.map((elem, index) =>{
-            // console.log(elem)
-            return <div key={index}>
-              <h1>{elem.service_name}</h1>
-              <h1>{elem.private_price}</h1>
-              
-    
-            </div>
-          })}
-          
-        </div>
-        <div>
-          To Pay
-          <div>{ element.services.reduce((acc, elem) => {
-            return acc + parseFloat(elem.private_price)
-          },0)}</div>
-        </div>
+    return (
+      <div className="title" onClick>
         
-        <form onSubmit={(event) => this.handleSubmit(event)}>
-          <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local"/>
-          <input type="submit"/>
-        </form>
+        {this.state.appointments.map((element, i) => {
+          return (
+            <div key={i}>{element.services_name}</div>
+            
+
+          // console.log(element.services_name)
+          )
+
+        })}
+
       </div>
+    )
 
-    } )}
-    <div>
-      
-    </div>
-    </div>
-  
-  
+
+    // <h1>Appointment Date: {element.appointment_date}</h1>
+    // })}
+    // </div>
+    //   Services:{element.services.map((elem, index) => {
+    //   console.log(elem)
+    //   return <div key={index}>
+    //     <h1>{elem.service_name}</h1>
+    //     <h1>{elem.private_price}</h1>
+
+
+    //   </div>
+    // })}
+    // </div>
+    //       </div>
+    //       <div>
+    //         To Pay
+    //           <div>{element.services.reduce((acc, elem) => {
+    //         return acc + parseFloat(elem.private_price)
+    //       }, 0)}</div>
+    //       </div>
+
+    //       <form onSubmit={(event) => this.handleSubmit(event)}>
+    //         <input onChange={(event) => this.handleChange(event)} name='appointment_date' type="datetime-local" />
+    //         <input type="submit" />
+    //       </form>
+    //     </div>
+
+    // } )}
+
+
+
   }
-
-
-
 }
 
 export default Booking
