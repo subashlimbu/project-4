@@ -4,6 +4,7 @@ import ServiceCard from './ServiceCard'
 import Dropbox from './Dropbox'
 import auth from '../lib/auth'
 import { Link } from 'react-router-dom'
+import LoaderSpinner from './LoaderSpinner'
 
 class Services extends React.Component {
   constructor(props) {
@@ -18,7 +19,10 @@ class Services extends React.Component {
 
   componentDidMount() {
     axios
-      .get(('/api/appointments/category/'), { headers: { Authorization: `Bearer ${auth.getToken()}` } })
+      .get('/api/appointments/category/')
+      //  {
+      //   headers: { Authorization: `Bearer ${auth.getToken()}` }
+      // })
       .then((res) => {
         this.setState({
           category: res.data,
@@ -54,10 +58,9 @@ class Services extends React.Component {
       console.log(choices)
       this.setState({ choices })
     } else {
-      const newchoices = choices.filter(choice => {
+      const newchoices = choices.filter((choice) => {
         // console.log(choice)
         return choice !== event.target.value
-        
       })
       this.setState({ choices: newchoices })
     }
@@ -66,26 +69,36 @@ class Services extends React.Component {
   }
 
   render() {
-    // console.log(this.state.category)
+    const isLoggedIn = auth.isLoggedIn()
 
-    if (!this.state.filteredCategories) return <p> Waiting</p>
+    console.log(isLoggedIn)
+
+    if (!this.state.filteredCategories) return <p> <LoaderSpinner /></p>
 
     return (
       <div className="servicePage">
         <div className="serviceFlex">
           <div className="serviceWrap">
             <Dropbox handleDropDown={() => this.handleDropdown(event)} />
-            <Link to={{
-              pathname: '/bookings',
-              state: this.state.choices
-              
-            }}><button className="button1">Book Now</button></Link>
+            {isLoggedIn && (
+              <Link
+                to={{
+                  pathname: '/bookings',
+                  state: this.state.choices
+                }}
+              >
+                <button className="button1">Book Now</button>
+              </Link>
+            )}
             <div className="columns is-full-mobile is-multiline is-centered mobile-padding">
               {this.state.filteredCategories.map((services, index) => {
                 // console.log(this.state.filteredCategories)
                 return (
                   <div key={index} className="correct">
-                    <ServiceCard handleChange = {(event) => this.handleChange(event)} {...services} />
+                    <ServiceCard
+                      handleChange={(event) => this.handleChange(event)}
+                      {...services}
+                    />
                   </div>
                 )
               })}

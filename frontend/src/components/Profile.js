@@ -12,8 +12,9 @@ const Profile = () => {
       .then((resp) => {
         // console.log(resp.data)
         setData(resp.data)
+        console.log(data)
       })
-      .catch( error => console.error(error))
+      .catch(error => console.error(error))
   }, [])
 
 
@@ -35,7 +36,7 @@ const Profile = () => {
     
     {data.appointments.map((e, i) => {
       // console.log(e.services)
-      <div key={i}>{e.appointment_date}</div>
+
       return  (
         
         e.services.map((services, index) => {
@@ -44,10 +45,7 @@ const Profile = () => {
   
         }))
      
-
-
     })}
-
 
     {data.appointments.map((e, i) => {
       // console.log(e.services)
@@ -62,3 +60,4 @@ const Profile = () => {
 }
 
 export default Profile
+

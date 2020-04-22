@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-// import auth from '../lib/auth'
-
+import auth from '../lib/auth'
 
 const ServiceCard = ({ category, services, handleChange }) => {
+  const isLoggedIn = auth.isLoggedIn()
 
   return (
-    
     <section>
       <div
         className="column is-one-third-tablet is-half-mobile categoryAndService"
@@ -45,14 +44,14 @@ const ServiceCard = ({ category, services, handleChange }) => {
                       £ {service.business_price}
                     </p>
                     {/* <input type="checkbox" name={service.service_name} id="x" /> */}
-                    <input
-                      onChange={handleChange}
-                      type="checkbox"
-                      // value={JSON.stringify(service)}
-                      value={JSON.stringify(service)}
-                      
-                    />
-                    
+                    {isLoggedIn && (
+                      <input
+                        onChange={handleChange}
+                        type="checkbox"
+                        // value={JSON.stringify(service)}
+                        value={JSON.stringify(service)}
+                      />
+                    )}
                   </div>
                 )
               })}
@@ -63,7 +62,6 @@ const ServiceCard = ({ category, services, handleChange }) => {
     </section>
   )
 }
-
 
 export default ServiceCard
 
