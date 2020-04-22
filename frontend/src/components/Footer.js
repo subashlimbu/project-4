@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="has-text-centered textFooter">
-        <h2>Meet The Team</h2>
+        <h2>L.A.B.S Team</h2>
       </div>
 
       <div className="has-text-centered flexFoot">
