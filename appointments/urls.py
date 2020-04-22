@@ -9,6 +9,5 @@ urlpatterns = [
     path('services/<int:pk>/', ServiceDetailView.as_view()),
     path('category/', CategoryListView.as_view()),
     path('category/<int:pk>/', CategoryDetailView.as_view()),
-    path('user/<int:pk>/', UserDetailView.as_view()),
-    
+    path('user/<int:pk>/', UserDetailView.as_view()),   
 ]
