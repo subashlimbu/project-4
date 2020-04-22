@@ -10,44 +10,52 @@ const Profile = () => {
   useEffect(() => {
     axios.get('/api/profile', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
       .then((resp) => {
+        // console.log(resp.data)
         setData(resp.data)
+        console.log(data)
       })
       .catch(error => console.error(error))
   }, [])
 
+
   if (!data) {
     return null
   }
+    
+  
+  return  <div>
+    {/* {console.log(data)} */}
+    
+    <h1>Username: {data.username}</h1>
+    <h1>Email: {data.email}</h1>
+    <h1>First Name: {data.first_name}</h1>
+    <h1>Last Name: {data.last_name}</h1>
+    <h1>Age: {data.age}</h1>
+    <h1>Phone Number: {data.phone_number}</h1>
+    <h1>{console.log(data.appointments)}</h1>
+    
+    {data.appointments.map((e, i) => {
+      // console.log(e.services)
 
-  return <div className="main-container">{console.log(data)}
-    <div className="columns">
-      <div className="column is-half">
-        <h1 className="title is-1 is-title-light">{data.first_name} {data.last_name}</h1>
-        <hr />
+      return  (
+        
+        e.services.map((services, index) => {
+          console.log(services.service_name)
+          return <div key={index}>  <p>{services.service_name}</p>  </div>
+  
+        }))
+     
+    })}
 
-        {/* <figure className="image is-4by3">
-          <img src={profile.user.image} alt={name} className="image" />
-        </figure> */}
-
-        <div className="column" >
-          <div className="details">
-            <p> Username: {data.username}</p>
-            <p> Age: {data.age}</p>
-            <p> Email: {data.email}</p>
-            <p> Phone number: {data.phone_number}</p>
-
-            <div>
-              {data.appointments.map(profile =>
-                <div key={profile}>{profile.appointment_date}</div>
-              )}
-            </div>
-
-            <a>Reset Password!</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    {data.appointments.map((e, i) => {
+      // console.log(e.services)
+      
+      return  <div key={i}>{e.appointment_date}</div>
+        
+    })}
+      
   </div>
+    
 
 }
 
