@@ -18,6 +18,10 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/appointments/', include('appointments.urls')),
@@ -26,7 +30,9 @@ urlpatterns = [
     path('api/services/', include('appointments.urls')),
     path('api/category/', include('appointments.urls')),
     path('api/user/', include('appointments.urls')),
-    path('api/emails/', include('mail.urls'))
+    path('api/emails/', include('mail.urls')),
+    
+    path('account/', include('django.contrib.auth.urls'))
     # path('', include('mail.urls'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

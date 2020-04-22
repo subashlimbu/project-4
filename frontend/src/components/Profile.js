@@ -18,6 +18,7 @@ const Profile = () => {
   // console.log(data)
   return <div>
 
+    <img src="{{ obj1.photo.url }}"></img>
     {data.map(profile => {
       console.log(profile)
 
