@@ -7,7 +7,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    image = models.ImageField(upload_to='media/', max_length=100, null=True)
+    image = models.ImageField(upload_to='media/', null=True)
     age = models.IntegerField(null=True)
     phone_number = models.IntegerField(null=True)
     BUSINESS = 'BA'
@@ -24,3 +24,4 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+    
