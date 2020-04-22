@@ -44,14 +44,15 @@ class Register extends React.Component {
       })
       // .then(() => this.props.history.push('/login'))
       .catch(error => {
+        
         this.setState({ errors: error.response.data })
+        console.log(error.response.data)
       })
   }
 
   render() {
 
     const { errors } = this.state
-    // console.log(errors)
 
     return <section className="hero">
       <div className="hero-body ">
@@ -213,41 +214,10 @@ class Register extends React.Component {
           </div>
         </div>
       </div>
-      {/* </div> */}
-      {/* </div>
-      </div> */}
+     
     </section>
 
 
-
-    // return <div>
-    //   <h2>Register</h2>
-    //   <form onSubmit={(event) => this.handleSubmit(event)}>
-    //     <label>Email</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="email" type="text"/>
-    //     <label>Username</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="username" type="text"/>
-    //     <label>First Name</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="first_name" type="text"/>
-    //     <label>Last Name</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="last_name" type="text"/>
-    //     <label>Age</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="age" type="number"/>
-    //     <label>Phone Number</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="phone_number" type="number"/>
-    //     <label>Password</label>
-    //     <input onChange={(event) => this.handleChange(event)} name="password" type="password"/>
-    //     <label>Confirm Password</label>
-    //     <input 
-    //       onChange={(event) => this.handleChange(event)} type="password" name="password_confirmation"/>
-    //     {/* <label>User Type</label>
-    //     <select value={this.state.user_type} onChange={(event) => this.handleChange(event)} name="user_type">
-    //       <option value="Business">Business</option>
-    //       <option value="Individual">Individual</option>
-    //     </select> */}
-    //     <button>Register</button>
-    //   </form>
-    // </div>
 
 
   }
