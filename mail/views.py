@@ -7,10 +7,11 @@ from django.core.mail import send_mail
 
 def index(request):
 
-    send_mail('Hello from Tinder',
-              'Good Work today Everyone',
+    send_mail('Hello from L.A.B.S',
+              'Good Work ',
               'medbooking@btinternet.com',
               ['fagiw13004@emailhost99.com'],
               fail_silently=False)
 
     return render(request, 'send/index.html')
+    # return render(request, '../frontend/src/components/Profile.js')

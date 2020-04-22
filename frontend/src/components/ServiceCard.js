@@ -26,6 +26,7 @@ const ServiceCard = ({ category, services, handleChange }) => {
           <div>
             <div>
               {services.map((service, i) => {
+                // console.log(service)
                 return (
                   <div key={i} className="serviceNameFlex">
                     <p id="sn" className="service">
@@ -44,9 +45,11 @@ const ServiceCard = ({ category, services, handleChange }) => {
                     <input
                       onChange={handleChange}
                       type="checkbox"
-                      // convert [object Object]
+                      // value={JSON.stringify(service)}
                       value={JSON.stringify(service)}
+                      
                     />
+                    
                   </div>
                 )
               })}
@@ -59,3 +62,5 @@ const ServiceCard = ({ category, services, handleChange }) => {
 }
 
 export default ServiceCard
+
+// loop over check boxes

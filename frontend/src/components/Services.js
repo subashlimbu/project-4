@@ -54,13 +54,19 @@ class Services extends React.Component {
       this.setState({ choices })
     } else {
       const newchoices = choices.filter(choice => {
+        // console.log(choice)
         return choice !== event.target.value
+        
       })
       this.setState({ choices: newchoices })
     }
+    // console.log('choices: ' + choices)
+    // console.log(choices)
   }
 
   render() {
+    // console.log(this.state.category)
+
     if (!this.state.filteredCategories) return <p> Waiting</p>
 
     return (
