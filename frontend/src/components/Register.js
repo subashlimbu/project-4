@@ -31,33 +31,28 @@ class Register extends React.Component {
       .post('/api/register', this.state.data)
       .then((res) => console.log('response', res))
       .then((res) => {
-        // console.log('hi')
-        // const token = res.data.token
-        // auth.setToken(token)
         this.props.history.push('/login')
       })
-      // .then(() => this.props.history.push('/login'))
+
       .catch((error) => {
         this.setState({ errors: error.response.data })
       })
   }
   render() {
     const { errors } = this.state
-    // console.log(errors)
 
-    return <div className="login-container">
-      <section className="hero is-success is-fullheight">
-        <div className="hero-body ">
-          <div className="container has text-centered">
-            <div className="columns">
-              <div className="column is-one-third">
+    return (
+      <div className="login-container">
+        <section className="hero is-success is-fullheight">
+          <div className="hero-body ">
+            <div className="container has text-centered">
+              <div className="column is-half">
                 <div className="login-top">
                   <h1 className="title">Register</h1>
                   <hr className="login-hr" />
                   <p className="subtitle">
                     Please enter your details to register.
-                </p>
-
+                  </p>
                 </div>
                 <div className="box column is-half">
                   <form
@@ -89,7 +84,9 @@ class Register extends React.Component {
                         />
                       </div>
                       {errors.username && (
-                        <small className="help is-danger">{errors.username}</small>
+                        <small className="help is-danger">
+                          {errors.username}
+                        </small>
                       )}
                     </div>
                     <div className="field">
@@ -119,7 +116,9 @@ class Register extends React.Component {
                         />
                       </div>
                       {errors.last_name && (
-                        <small className="help is-danger">{errors.last_name}</small>
+                        <small className="help is-danger">
+                          {errors.last_name}
+                        </small>
                       )}
                     </div>
                     <div className="field">
@@ -163,7 +162,9 @@ class Register extends React.Component {
                         />
                       </div>
                       {errors.password && (
-                        <small className="help is-danger">{errors.password}</small>
+                        <small className="help is-danger">
+                          {errors.password}
+                        </small>
                       )}
                     </div>
                     <div className="field">
@@ -182,16 +183,17 @@ class Register extends React.Component {
                         </small>
                       )}
                     </div>
-                    <button className="button is-success is-large">Register</button>
+                    <button className="button is-success is-large">
+                      Register
+                    </button>
                   </form>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-
+        </section>
+      </div>
+    )
   }
 }
 export default Register

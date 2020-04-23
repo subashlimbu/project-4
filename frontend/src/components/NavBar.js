@@ -106,4 +106,3 @@ class NavBar extends React.Component {
 }
 
 export default withRouter(NavBar)
-// will need to be withRouter in future

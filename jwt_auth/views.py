@@ -12,9 +12,10 @@ from rest_framework.permissions import IsAuthenticated
 
 User = get_user_model()
 
+
 class RegisterView(CreateAPIView):
     serializer_class = UserSerializer
-    
+
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
@@ -22,6 +23,7 @@ class RegisterView(CreateAPIView):
             return Response({'message': 'Registration successful'})
 
         return Response(serializer.errors, status=422)
+
 
 class LoginView(APIView):
 
@@ -40,11 +42,12 @@ class LoginView(APIView):
         if not user.check_password(password):
             raise PermissionDenied({'message': 'Invalid credentials'})
 
-        token = jwt.encode({'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
+        token = jwt.encode(
+            {'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
         return Response({'token': token, 'message': f'Welcome back {user.username}!'})
 
 
-# Profile view - Not currently used
+# Profile view
 class ProfileView(APIView):
 
     permission_classes = (IsAuthenticated, )
@@ -53,6 +56,3 @@ class ProfileView(APIView):
         user = User.objects.get(pk=request.user.id)
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data)
-    
-
-    
