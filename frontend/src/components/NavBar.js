@@ -61,9 +61,11 @@ class NavBar extends React.Component {
                 </div>
 
                 <div className="navbar-item">
-                  <Link className="navbar-edited" to="/profile">
-                    Profile
-                  </Link>
+                  {isLoggedIn && (
+                    <Link className="navbar-edited" to="/profile">
+                      Profile
+                    </Link>
+                  )}
                 </div>
 
                 <div className="navbar-item">
