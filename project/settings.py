@@ -142,9 +142,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Email settings set-up
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.btinternet.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'medbooking@btinternet.com'
+EMAIL_HOST_USER = 'labsmedical@btinternet.com'
 EMAIL_HOST_PASSWORD = 'project-4'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True

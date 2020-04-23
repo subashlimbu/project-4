@@ -4,12 +4,11 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="has-text-centered textFooter">
-        <h2>L.A.B.S ™ Team </h2>
+        <h2> The L.A.B.S Team </h2>
       </div>
-
       <div className="has-text-centered flexFoot">
         <div className="footerGroup1">
-          João
+          <div>João</div>
           <a
             target="blank"
             href="https://github.com/jdpintoGA"
@@ -21,11 +20,10 @@ export default function Footer() {
           ></a>
         </div>
         <div className="footerGroup2">
-          Gordon
+          <div>Gordon</div>
           <a
             href="https://github.com/Intravenous"
             className="fab fa-github fa-2x footerItem"
-            footerItem
           ></a>
           <a
             href="https://www.linkedin.com/in/gordon-gyakyi/"
@@ -33,7 +31,7 @@ export default function Footer() {
           ></a>
         </div>
         <div className="footerGroup3">
-          Subash
+          <div>Subash</div>
           <a
             href="https://github.com/subashlimbu"
             className="fab fa-github fa-2x footerItem"
@@ -44,7 +42,7 @@ export default function Footer() {
           ></a>
         </div>
         <div className="footerGroup4">
-          David
+          <div>David</div>
           <a
             href="https://github.com/dromerosalem"
             className="fab fa-github fa-2x footerItem"
