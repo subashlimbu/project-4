@@ -11,6 +11,7 @@ export default function Footer() {
         <div className="footerGroup1">
           João
           <a
+            target="blank"
             href="https://github.com/jdpintoGA"
             className="fab fa-github fa-2x footerItem"
           ></a>

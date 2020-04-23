@@ -34,8 +34,8 @@ urlpatterns = [
     # path('api/emails/', include('mail.urls')),
     path('emails/', include('mail.urls')),
     
-    
-    
+    path('upload/', include('uploadapp.urls')),
+        
     path('account/', include('django.contrib.auth.urls')),
     
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
@@ -53,7 +53,8 @@ urlpatterns = [
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
      name='password_reset_complete'),
     
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
-   
+if settings.DEBUG:
+  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
