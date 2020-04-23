@@ -8,8 +8,6 @@ User = get_user_model()
 
 class Category(models.Model):
     category = models.CharField(max_length=50)
-    # Cannot use below becuse get a service is not defined error
-    # services = models.ForeignKey(Service, related_name='category', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = "categories"

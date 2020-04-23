@@ -1,10 +1,4 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
-// import axios from 'axios'
-// import { withRouter } from 'react-router-dom'
-// import { Spring } from 'react-spring/renderprops'
-// import { Parallax } from 'react-parallax'
-// import NavBar from './NavBar'
 
 const Home = () => {
   return (
@@ -12,7 +6,7 @@ const Home = () => {
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title is-1 has-text-warning has-text-centered">
-            Le Appointment Booking System
+            Laboratory Appointment Booking System
           </h1>
           <h2 className="subtitle is-6 has-text-grey-darker has-text-centered">
             Bookings made better...

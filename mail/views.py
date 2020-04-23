@@ -9,8 +9,9 @@ def index(request):
 
     send_mail('Hello from L.A.B.S',
               'We are pleased to confirm that your booking with Labs is now complete.',
-              'medbooking@btinternet.com',
-              ['labs@2go-mail.com'],
+              # 'medbooking@btinternet.com',
+              'labsmedical@btinternet.com',
+              ['medielab@2go-mail.com'],
               fail_silently=False)
 
     return render(request, 'send/index.html')

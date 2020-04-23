@@ -16,11 +16,11 @@ class NavBar extends React.Component {
     this.props.history.push('/')
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.location.pathname !== prevProps.location.pathname) {
-  //     this.setState({ navMobileOpen: false })
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.setState({ navMobileOpen: false })
+    }
+  }
 
   render() {
     const isLoggedIn = auth.isLoggedIn()
@@ -106,4 +106,3 @@ class NavBar extends React.Component {
 }
 
 export default withRouter(NavBar)
-// will need to be withRouter in future

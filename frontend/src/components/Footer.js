@@ -4,12 +4,13 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="has-text-centered textFooter">
-        <h2> The L.A.B.S Team </h2>
+        <h2> Team L.A.B.S </h2>
       </div>
       <div className="has-text-centered flexFoot">
         <div className="footerGroup1">
           <div>João</div>
           <a
+            target="blank"
             href="https://github.com/jdpintoGA"
             className="fab fa-github fa-2x footerItem"
           ></a>

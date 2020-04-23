@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import auth from '../lib/auth'
-import LoaderSpinner from './LoaderSpinner'
 
 class Booking extends React.Component {
   constructor() {
@@ -16,12 +15,9 @@ class Booking extends React.Component {
   }
 
   componentDidMount() {
-    // console.log(this.props.location)
     const testArray = this.props.location.state.map((serviceObject) => {
       return JSON.parse(serviceObject)
     })
-    // axios.get('/api/appointments/', { headers: { Authorization: `Bearer ${auth.getToken()}` } })
-    //   .then(res => this.setState({ appointments: res.data }))
 
     const servicesArray = []
     testArray.forEach((e) => {
@@ -33,10 +29,8 @@ class Booking extends React.Component {
   }
 
   handleChange(event) {
-    // console.log(event.target)
     const { name, value } = event.target
     const data = { ...this.state.data, [name]: value }
-    // console.log(data)
     this.setState({ data })
   }
 
@@ -52,14 +46,9 @@ class Booking extends React.Component {
         this.props.history.push('/profile')
       })
       .catch((error) => console.error(error))
-
-    // console.log(this.state.appointments)
   }
 
-  // console.log(this.state.appointments)
-
   render() {
-    //you can't parse an array, you can only parse a string and so you will need
     console.log(this.state.data)
     const mappedAppointments = this.state.thiswontbeposted
 
@@ -74,8 +63,6 @@ class Booking extends React.Component {
                   <h2>{`${index}  -  ${elem.service_name} - Price - £ ${elem.private_price} `}</h2>
                 </div>
               )
-
-              // console.log(elem.service_name)
             })}
           </div>
           <div className="toPayGroup">

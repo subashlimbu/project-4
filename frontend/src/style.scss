@@ -32,9 +32,6 @@ body {
   margin-right: 40%;
 }
 
-// .hero-body {
-//   padding: 5px;
-// }
 #homeBtn {
   background-color: inherit;
   font-family: 'Ruslan Display', cursive;
@@ -139,7 +136,6 @@ div.hero-body {
 
   .serviceFlex {
     .categoryTitle {
-      // background-color: rgb(0, 107, 41);
       text-align: center;
       color: black;
       font-weight: 700;
@@ -150,7 +146,6 @@ div.hero-body {
       .serviceWrap {
         background-color: rgba(19, 182, 101, 0.233);
         input[type='checkbox'] {
-          /* Double-sized Checkboxes */
           -ms-transform: scale(2.3); /* IE */
           -moz-transform: scale(2.3); /* FF */
           -webkit-transform: scale(2.3); /* Safari and Chrome */
@@ -324,7 +319,7 @@ div.hero-body {
   left: calc(98% - 8px);
 }
 
-// Bookings
+//========================================== BOOKING ==========================================================
 .bookingPay {
   background: linear-gradient(white, rgb(221, 221, 221), rgb(190, 190, 190));
   .calendarBook {
@@ -387,5 +382,39 @@ div.hero-body {
     font-size: large;
     color: rgb(24, 61, 24);
     font-weight: 600;
+  }
+}
+
+//==========================================PROFILE STYLING===================================================
+
+.mainProfile {
+  height: 100vh;
+  background: url('https://www.elgalabwater.com/sites/default/files/inline-images/GettyImages-914789708%20%281%29_0.jpg');
+
+  .profileContainer {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+
+    .personalDetails {
+      margin-top: 10%;
+      background-color: rgba(36, 35, 35, 0.55);
+      padding: 5%;
+      height: 45%;
+      color: rgb(255, 255, 255);
+    }
+
+    .profileAppointments {
+      margin-top: 10%;
+      background-color: rgba(36, 35, 35, 0.55);
+      padding: 5%;
+      height: 60%;
+      color: rgb(255, 255, 255);
+    }
+    .profileTitle {
+      font-weight: bold;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
   }
 }
