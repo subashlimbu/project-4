@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-from .models import File
+# from .models import File
 
 class File(models.Model):
     file = models.FileField(blank=False, null=False)

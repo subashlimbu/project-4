@@ -23,3 +23,5 @@ class FileUploadView(APIView):
       else:
           return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
       
+      
+      
