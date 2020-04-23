@@ -78,7 +78,6 @@ class Services extends React.Component {
       <div className="servicePage">
         <div className="serviceFlex">
           <div className="serviceWrap">
-            <Dropbox handleDropDown={() => this.handleDropdown(event)} />
             {isLoggedIn && (
               <Link
                 to={{
@@ -89,6 +88,10 @@ class Services extends React.Component {
                 <button className="button1">Book Now</button>
               </Link>
             )}
+            <div className="dropWrap">
+              <Dropbox handleDropDown={() => this.handleDropdown(event)} />
+            </div>
+
             <div className="columns is-full-mobile is-multiline is-centered mobile-padding">
               {this.state.filteredCategories.map((services, index) => {
                 // console.log(this.state.filteredCategories)

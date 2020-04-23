@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-
+import auth from '../lib/auth'
+// import { Link } from 'react-router-dom'
 class Register extends React.Component {
   constructor() {
     super()
@@ -32,6 +33,7 @@ class Register extends React.Component {
       .then((res) => {
         this.props.history.push('/login')
       })
+
       .catch((error) => {
         this.setState({ errors: error.response.data })
       })

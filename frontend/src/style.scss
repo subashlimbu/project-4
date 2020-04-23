@@ -26,10 +26,12 @@ body {
   font-size: 25px;
   color: white;
   padding: 10px 10px;
-  // margin: 0 auto;
-  width: 20%;
+  border-radius: 5px;
+  width: 22.6%;
   margin-left: 40%;
   margin-right: 40%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #homeBtn {
@@ -154,6 +156,7 @@ div.hero-body {
           margin-top: 9.5px;
           margin-left: 10px;
         }
+
         .serviceHeader {
           display: flex;
           padding-top: 3px;
@@ -417,4 +420,8 @@ div.hero-body {
       margin-bottom: 2%;
     }
   }
+}
+.dropWrap {
+  margin-left: 40%;
+  margin-right: 40%;
 }
