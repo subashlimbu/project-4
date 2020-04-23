@@ -23,37 +23,43 @@ const Profile = () => {
   }
     
   
-  return  <div>
+  return  <div className='mainProfile'>
     {/* {console.log(data)} */}
-    
-    <h1>Username: {data.username}</h1>
-    <h1>Email: {data.email}</h1>
-    <h1>First Name: {data.first_name}</h1>
-    <h1>Last Name: {data.last_name}</h1>
-    <h1>Age: {data.age}</h1>
-    <h1>Phone Number: {data.phone_number}</h1>
-    <h1>{console.log(data.appointments)}</h1>
-    
-    {data.appointments.map((e, i) => {
-      // console.log(e.services)
+    <div className='profileContainer' >
+      <div className="personalDetails">
+        <h1 className='profileTitle'>YOUR PERSONAL DETAILS</h1>
+        <h1>Username: {data.username}</h1>
+        <h1>Email: {data.email}</h1>
+        <h1>First Name: {data.first_name}</h1>
+        <h1>Last Name: {data.last_name}</h1>
+        <h1>Age: {data.age}</h1>
+        <h1>Phone Number: {data.phone_number}</h1>
+      </div>
+      <div className="profileAppointments">
+        {/* <h1>{console.log(data.appointments)}</h1> */}
+        <h1 className='profileTitle'>YOUR APPOINTMENTS</h1>
+        <h1>Services:</h1>
+        {data.appointments.map((e, i) => {
+          // console.log(e.services)
 
-      return  (
+          return  (
         
-        e.services.map((services, index) => {
-          console.log(services.service_name)
-          return <div key={index}>  <p>{services.service_name}</p>  </div>
+            e.services.map((services, index) => {
+              console.log(services.service_name)
+              return <div key={index}>  <p>{services.service_name}</p>  </div>
   
-        }))
+            }))
      
-    })}
-
-    {data.appointments.map((e, i) => {
-      // console.log(e.services)
+        })}
+        <h1 className='profileTitle'>Appoitment Date:</h1>
+        {data.appointments.map((e, i) => {
+          // console.log(e.services)
       
-      return  <div key={i}>{e.appointment_date}</div>
+          return  <div key={i}>{e.appointment_date}</div>
         
-    })}
-      
+        })}
+      </div>
+    </div>
   </div>
     
 

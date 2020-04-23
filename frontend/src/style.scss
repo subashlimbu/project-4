@@ -352,3 +352,44 @@ div.hero-body {
     font-weight: 600;
   }
 }
+
+
+//==========================================PROFILE STYLING===================================================
+
+
+.mainProfile{
+height: 100vh;
+background: url('https://www.elgalabwater.com/sites/default/files/inline-images/GettyImages-914789708%20%281%29_0.jpg');
+
+
+
+.profileContainer{
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  // margin-top: 10%;
+
+  .personalDetails{
+    margin-top: 10%;
+    background-color:rgba(36, 35, 35, .55);
+    padding: 5%;
+    height: 45%;
+    color: rgb(255, 255, 255);
+  }
+
+  .profileAppointments{
+    margin-top: 10%;
+    background-color: rgba(36, 35, 35, .55);
+    padding: 5%;
+    height: 60%;
+    color: rgb(255, 255, 255);
+    
+  }
+  .profileTitle{
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+}
+}
