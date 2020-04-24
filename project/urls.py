@@ -31,6 +31,7 @@ urlpatterns = [
     path('api/category/', include('appointments.urls')),
     path('api/user/', include('appointments.urls')),
     path('api/emails/', include('mail.urls')),
+    path('', include('frontend.urls'))
     # path('confirmation/', include('mail.urls')),
 
     # the following are wip

@@ -12,7 +12,7 @@ const Profile = () => {
       })
       .then((resp) => {
         setData(resp.data)
-        console.log(data)
+        // console.log(data)
       })
       .catch((error) => console.error(error))
   }, [])
