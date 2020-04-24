@@ -51,7 +51,6 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'jwt_auth.User'
 
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -115,8 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -142,7 +139,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Email settings set-up
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.btinternet.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'labsmedical@btinternet.com'

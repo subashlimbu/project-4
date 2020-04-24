@@ -10,5 +10,6 @@ urlpatterns = [
     path('category/', CategoryListView.as_view()),
     path('category/<int:pk>/', CategoryDetailView.as_view()),
     path('user/<int:pk>/', UserDetailView.as_view()),
+
     # path('user_images', display_user_images, name='user_images')
 ]

@@ -20,9 +20,6 @@ class Services extends React.Component {
   componentDidMount() {
     axios
       .get('/api/appointments/category/')
-      //  {
-      //   headers: { Authorization: `Bearer ${auth.getToken()}` }
-      // })
       .then((res) => {
         this.setState({
           category: res.data,
@@ -42,7 +39,6 @@ class Services extends React.Component {
         if (
           service.category.toLowerCase() === event.target.value.toLowerCase()
         ) {
-          // console.log(service.services)
           return event.target.value
         }
       })
@@ -52,20 +48,17 @@ class Services extends React.Component {
 
   handleChange(event) {
     const choices = this.state.choices
-    // console.log(this.state.choices)
+
     if (event.target.checked === true) {
       choices.push(event.target.value)
       console.log(choices)
       this.setState({ choices })
     } else {
       const newchoices = choices.filter((choice) => {
-        // console.log(choice)
         return choice !== event.target.value
       })
       this.setState({ choices: newchoices })
     }
-    // console.log('choices: ' + choices)
-    // console.log(choices)
   }
 
   render() {
@@ -73,13 +66,18 @@ class Services extends React.Component {
 
     console.log(isLoggedIn)
 
-    if (!this.state.filteredCategories) return <p> <LoaderSpinner /></p>
+    if (!this.state.filteredCategories)
+      return (
+        <p>
+          {' '}
+          <LoaderSpinner />
+        </p>
+      )
 
     return (
       <div className="servicePage">
         <div className="serviceFlex">
           <div className="serviceWrap">
-            <Dropbox handleDropDown={() => this.handleDropdown(event)} />
             {isLoggedIn && (
               <Link
                 to={{
@@ -90,6 +88,10 @@ class Services extends React.Component {
                 <button className="button1">Book Now</button>
               </Link>
             )}
+            <div className="dropWrap">
+              <Dropbox handleDropDown={() => this.handleDropdown(event)} />
+            </div>
+
             <div className="columns is-full-mobile is-multiline is-centered mobile-padding">
               {this.state.filteredCategories.map((services, index) => {
                 // console.log(this.state.filteredCategories)

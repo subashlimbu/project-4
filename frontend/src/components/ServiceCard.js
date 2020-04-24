@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React from 'react'
 import auth from '../lib/auth'
 
 const ServiceCard = ({ category, services, handleChange }) => {
@@ -28,7 +27,6 @@ const ServiceCard = ({ category, services, handleChange }) => {
           <div>
             <div>
               {services.map((service, i) => {
-                // console.log(service)
                 return (
                   <div key={i} className="serviceNameFlex">
                     <p id="sn" className="service">
@@ -43,12 +41,10 @@ const ServiceCard = ({ category, services, handleChange }) => {
                     <p id="bp" className="service">
                       £ {service.business_price}
                     </p>
-                    {/* <input type="checkbox" name={service.service_name} id="x" /> */}
                     {isLoggedIn && (
                       <input
                         onChange={handleChange}
                         type="checkbox"
-                        // value={JSON.stringify(service)}
                         value={JSON.stringify(service)}
                       />
                     )}
@@ -64,5 +60,3 @@ const ServiceCard = ({ category, services, handleChange }) => {
 }
 
 export default ServiceCard
-
-// loop over check boxes
