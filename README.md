@@ -405,3 +405,15 @@ This component is the last one of the User journey as it will be showing all the
  ## Successes
 ​
  - One big success was planning at the beginning of the project, when doing the data modeling we had a clear idea of what we wanted to build so the MVC was achieved in a fast and efficient manner. 
+
+ ## Lessons learned
+- The importance of designing your models and the fields correctly was a great lesson learnt. In development, by ensuring these are correct it will make accessing and making requests to the API much easier.
+- How to use an Admin Panel
+- A better understanding of PostgreSQL, Django and Python
+- Planning a project for a specific time-frame.
+- Django and Python provide useful information for error handling.
+
+## Future features
+- Uploading Profile picture.
+- Comment on the products. User will be able to post a comment after logged in.
+- A chat feature where users can interact to get suggestions.
